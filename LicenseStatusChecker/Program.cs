@@ -19,6 +19,11 @@ namespace LicenseStatusChecker
             //{
             //    Console.WriteLine(license);
             //}
+
+            CheckLicenses checkLicenses = new CheckLicenses();
+            checkLicenses.inputLicenses(LicensesToCheck);
+
+            Console.WriteLine("The check has been completed.");
             Console.Read();
         }
     }

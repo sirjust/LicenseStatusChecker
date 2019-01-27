@@ -5,3 +5,8 @@ C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Debu
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Debug\LicenseStatusChecker.csproj.CoreCompileInputs.cache
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Debug\LicenseStatusChecker.exe
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Debug\LicenseStatusChecker.pdb
+C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Debug\WebDriver.dll
+C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Debug\WebDriver.Support.dll
+C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Debug\WebDriver.xml
+C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Debug\WebDriver.Support.xml
+C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Debug\LicenseStatusChecker.csproj.CopyComplete

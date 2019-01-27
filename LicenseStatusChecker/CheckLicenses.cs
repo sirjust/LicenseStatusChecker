@@ -17,12 +17,11 @@ namespace LicenseStatusChecker
         public void inputLicenses(List<string> licenses)
         {
             // Console.WriteLine(thisPath);
-            driver = new ChromeDriver(@"../../../packages/Selenium.Chrome.WebDriver.2.43/driver/");
+            driver = new ChromeDriver(@"../../../packages/Selenium.Chrome.WebDriver.2.45/driver/");
             driver.Url = "https://secure.lni.wa.gov/verify/";
             driver.Manage().Window.Maximize();
 
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
-
 
             foreach (string license in licenses)
             {
