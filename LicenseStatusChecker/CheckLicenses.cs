@@ -32,6 +32,10 @@ namespace LicenseStatusChecker
                 {
                     continue;
                 }
+
+                Tradesman thisTradesman = new Tradesman();
+                thisTradesman.LicenseNumber = license;
+
                 // we input the license into the page and search
                 IWebElement searchDropdown = wait.Until<IWebElement>(d => d.FindElement(By.Id("selSearchType")));
                 searchDropdown.Click();
@@ -64,6 +68,27 @@ namespace LicenseStatusChecker
                 if(isActive != "Active.")
                 {
                     continue;
+                }
+
+                // we need to check the trade and rank of the license holder
+                IWebElement licenseTypeElement = wait.Until<IWebElement>(d => d.FindElement(By.Id("LicenseType")));
+                thisTradesman.Trade = licenseTypeElement.GetAttribute("innerHTML");
+                thisTradesman.HoursNeeded = thisTradesman.GetHoursNeeded(thisTradesman.Trade);
+
+                // now that all our properties are populated, we need to check them against the credits the tradesman has already completed
+                bool hasCourses;
+                try
+                {
+                    IWebElement coursesElement = wait.Until(d => d.FindElement(By.Id("Courses")));
+                    hasCourses = true;
+                }
+                catch
+                {
+                    hasCourses = false;
+                }
+                if (!hasCourses)
+                {
+                    // add license to the send list
                 }
             }
         }
