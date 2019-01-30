@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace LicenseStatusChecker
@@ -17,6 +18,8 @@ namespace LicenseStatusChecker
 
         public void inputLicenses(List<string> licenses)
         {
+            // there is an extra item in the list due to how I constructed it. The next line removes it
+            licenses.Remove("");
             // Console.WriteLine(thisPath);
             driver = new ChromeDriver(@"../../../packages/Selenium.Chrome.WebDriver.2.45/driver/");
             driver.Url = "https://secure.lni.wa.gov/verify/";
@@ -26,12 +29,6 @@ namespace LicenseStatusChecker
 
             foreach (string license in licenses)
             {
-                // c# adds another empty license at the end of the list.. this code prevents it from running into exceptions
-                // we must be certain not to include empty spaces in between our licenses or it will only run to the first empty space
-                if (String.IsNullOrEmpty(license))
-                {
-                    continue;
-                }
 
                 Tradesman thisTradesman = new Tradesman();
                 thisTradesman.LicenseNumber = license;
@@ -47,18 +44,20 @@ namespace LicenseStatusChecker
                 searchButton.Click();
 
                 // now we pull up the details
-                //IWebElement resultsArea = wait.Until<IWebElement>(d => d.FindElement(By.Id("resultsArea")));
-                //resultsArea.Click();
                 IWebElement resultsTable = wait.Until<IWebElement>(d => d.FindElement(By.ClassName("itemLink")));
                 resultsTable.Click();
 
                 // now we check the license's expiration date
                 IWebElement expirationDateElement = wait.Until<IWebElement>(d => d.FindElement(By.Id("ExpirationDate")));
+                // this sleep is here because there was an exception while parsing on the next line if it ran too quickly
+                Thread.Sleep(3000);
                 DateTime expirationDate = DateTime.Parse(expirationDateElement.GetAttribute("innerHTML"));
                 int daysTillExpiration = expirationDate.Subtract(todaysDate).Days;
                 Console.WriteLine(daysTillExpiration.ToString());
-                if(daysTillExpiration > 90) // if the expiration date is far in the future, the tradesman has already renewed
+                IWebElement backButton = wait.Until(d => d.FindElement(By.Id("backBtn")));
+                if (daysTillExpiration > 90) // if the expiration date is far in the future, the tradesman has already renewed
                 {
+                    backButton.Click();
                     continue;
                 }
 
@@ -67,6 +66,8 @@ namespace LicenseStatusChecker
                 string isActive = licenseValidity.GetAttribute("innerHTML");
                 if(isActive != "Active.")
                 {
+                    // if the license is expired or inactive, we move on
+                    backButton.Click();
                     continue;
                 }
 
@@ -89,7 +90,10 @@ namespace LicenseStatusChecker
                 if (!hasCourses)
                 {
                     // add license to the send list
+                    backButton.Click();
+                    continue;
                 }
+                backButton.Click();
             }
         }
     }
