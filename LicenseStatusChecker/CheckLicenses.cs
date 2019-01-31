@@ -93,6 +93,20 @@ namespace LicenseStatusChecker
                     backButton.Click();
                     continue;
                 }
+                var allDataItems = driver.FindElements(By.XPath("//span[contains(text(),'.00')]"));
+                List<string> coursesTaken = new List<string>();
+                double numberOfCredits = 0.0;
+                foreach (var item in allDataItems)
+                {
+                    string data = item.GetAttribute("innerHTML");
+                    int index = data.IndexOf(" ");
+                    if (index > 0)
+                        data = data.Substring(0, index);
+                    coursesTaken.Add(data);
+                    numberOfCredits += Convert.ToDouble(data);
+                }
+                Console.WriteLine("{0} has completed {1} credits", thisTradesman.LicenseNumber, numberOfCredits);
+
                 backButton.Click();
             }
         }
