@@ -3,6 +3,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -29,7 +30,8 @@ namespace LicenseStatusChecker
 
             foreach (string license in licenses)
             {
-
+                // this sleep is here to allow time to change the data, otherwise there is a chance the same license could be entered twice and someone could be skipped
+                Task.Delay(1000).Wait();
                 Tradesman thisTradesman = new Tradesman();
                 thisTradesman.LicenseNumber = license;
 
@@ -49,14 +51,15 @@ namespace LicenseStatusChecker
 
                 // now we check the license's expiration date
                 IWebElement expirationDateElement = wait.Until<IWebElement>(d => d.FindElement(By.Id("ExpirationDate")));
-                // this sleep is here because there was an exception while parsing on the next line if it ran too quickly
-                Thread.Sleep(3000);
+                // this delay is here because there was an exception while parsing on the next line if it ran too quickly
+                Task.Delay(1000).Wait();
                 DateTime expirationDate = DateTime.Parse(expirationDateElement.GetAttribute("innerHTML"));
                 int daysTillExpiration = expirationDate.Subtract(todaysDate).Days;
-                Console.WriteLine(daysTillExpiration.ToString());
+                // Console.WriteLine("{0}: {1}", license, daysTillExpiration.ToString());
                 IWebElement backButton = wait.Until(d => d.FindElement(By.Id("backBtn")));
                 if (daysTillExpiration > 90) // if the expiration date is far in the future, the tradesman has already renewed
                 {
+                    Console.WriteLine("{0} has likely already renewed.", thisTradesman.LicenseNumber);
                     backButton.Click();
                     continue;
                 }
@@ -67,6 +70,7 @@ namespace LicenseStatusChecker
                 if(isActive != "Active.")
                 {
                     // if the license is expired or inactive, we move on
+                    Console.WriteLine("{0} is not active.", thisTradesman.LicenseNumber);
                     backButton.Click();
                     continue;
                 }
@@ -105,8 +109,14 @@ namespace LicenseStatusChecker
                     coursesTaken.Add(data);
                     numberOfCredits += Convert.ToDouble(data);
                 }
-                Console.WriteLine("{0} has completed {1} credits", thisTradesman.LicenseNumber, numberOfCredits);
-
+                Console.WriteLine("{0} has completed {1} credits and needs {2}", thisTradesman.LicenseNumber, numberOfCredits, thisTradesman.HoursNeeded);
+                if (thisTradesman.HoursNeeded > numberOfCredits)
+                {
+                    RecordLicensesToSend recordThis = new RecordLicensesToSend();
+                    StreamWriter sw = new StreamWriter(@"licensesToSend.txt", true);
+                    recordThis.record(thisTradesman.LicenseNumber, sw);
+                    sw.Close();
+                }
                 backButton.Click();
             }
         }
