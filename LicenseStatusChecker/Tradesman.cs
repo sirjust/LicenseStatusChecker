@@ -8,7 +8,18 @@ namespace LicenseStatusChecker
 {
     public class Tradesman
     {
+        // these properties are imported from the spreadsheet
+        public string LicenseType { get; set; }
         public string LicenseNumber { get; set; }
+        public string Name { get; set; }
+        public string Address1 { get; set; }
+        public string Address2 { get; set; }
+        public string City { get; set; }
+        public string State { get; set; }
+        public string Zip { get; set; }
+        public string ExpirationDateFromSpreadSheet { get; set; }
+
+        // we will verify trade in the web application
         public string Trade { get; set; }
         public int HoursNeeded { get; set; }
 
