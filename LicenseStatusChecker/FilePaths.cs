@@ -8,7 +8,7 @@ namespace LicenseStatusChecker
 {
     public static class FilePaths
     {
-        public static string readPath = @"C:\Users\SirJUST\HVAC_Documents\Automation Notes\plumbers.xls";
+        public static string readPath = @"C:\Users\SirJUST\HVAC_Documents\Automation Notes\Anytime CE 2-2019.xlsx";
         public static string writePath = @"C:\Users\SirJUST\source\repos\LicenseStatusChecker\excelSheet.xlsx";
     }
 }
