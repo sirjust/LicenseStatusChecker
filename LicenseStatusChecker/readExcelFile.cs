@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,15 +34,29 @@ namespace LicenseStatusChecker
                     Tradesman tradesman = new Tradesman();
                     var wsRow = sheet.Cells[rowNum, 1, rowNum, sheet.Dimension.End.Column];
                     var rawData = wsRow.Value;
+                    tradesman.LicenseNumber = ((object[,])rawData)[0, 1].ToString();
                     tradesman.ExpirationDateFromSpreadSheet = ((object[,])rawData)[0, 8].ToString();
                     DateTime expirationDate = DateTime.Parse(tradesman.ExpirationDateFromSpreadSheet);
                     int daysTillExpiration = expirationDate.Subtract(DateTime.Today).Days;
                     if (daysTillExpiration > 90)
                     {
+                        // log that this tradesman will not have the license checked
+                        Logger logger = new Logger();
+                        StreamWriter sw = new StreamWriter(@"greaterThan90.txt", true);
+                        logger.writeErrorsToLog($"{tradesman.LicenseNumber}'s expiration date is greater than 90.", sw);
+                        sw.Close();
+                        continue;
+                    }
+                    if (daysTillExpiration < 0)
+                    {
+                        // log that this tradesman will not have the license checked
+                        Logger logger = new Logger();
+                        StreamWriter sw = new StreamWriter(@"expired.txt", true);
+                        logger.writeErrorsToLog($"{tradesman.LicenseNumber}'s expiration date is in the past.", sw);
+                        sw.Close();
                         continue;
                     }
                     tradesman.LicenseType = ((object[,])rawData)[0, 0].ToString();
-                    tradesman.LicenseNumber = ((object[,])rawData)[0, 1].ToString();
                     tradesman.Name = ((object[,])rawData)[0, 2].ToString();
                     tradesman.Address1 = ((object[,])rawData)[0, 3].ToString();
                     if (((object[,])rawData)[0, 4] != null)

@@ -16,20 +16,18 @@ namespace LicenseStatusChecker
 
 
 
-            //Console.WriteLine("The check has been completed.");
-            //Console.Read();
             List<Tradesman> licenseList = new List<Tradesman>();
             WriteToExcelFile write = new WriteToExcelFile();
             readExcelFile read = new readExcelFile();
             licenseList = read.readSpreadSheet(FilePaths.readPath);
 
             CheckLicenses checkLicenses = new CheckLicenses();
-            checkLicenses.inputLicenses(licenseList);
+            List<Tradesman> tradesmenToSend = checkLicenses.inputLicenses(licenseList);
 
-            // write.WriteDataToFile();
+            write.WriteDataToFile(tradesmenToSend);
 
+            Console.WriteLine("The check has been completed.");
             Console.Read();
-
 
             // this code verifies the raw data has been turned into a list we can work with
             // we can use it later to verify all data has been mapped

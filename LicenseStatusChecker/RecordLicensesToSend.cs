@@ -13,5 +13,10 @@ namespace LicenseStatusChecker
         {
             sw.WriteLine("Send to: {0}", logMessage);
         }
+
+        public void doNotSend(string logMessage, TextWriter sw)
+        {
+            sw.WriteLine("Do not send to {0}.", logMessage);
+        }
     }
 }

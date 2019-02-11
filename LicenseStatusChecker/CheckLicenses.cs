@@ -17,9 +17,10 @@ namespace LicenseStatusChecker
         DateTime todaysDate = DateTime.Today;
         // string thisPath = System.IO.Directory.GetCurrentDirectory();
 
-        public void inputLicenses(List<Tradesman> tradesmanList)
+        public List<Tradesman> inputLicenses(List<Tradesman> tradesmanList)
         {
             // Console.WriteLine(thisPath);
+            List<Tradesman> tradesmenToSend = new List<Tradesman>();
             driver = new ChromeDriver(@"../../../packages/Selenium.Chrome.WebDriver.2.45/driver/");
             driver.Url = "https://secure.lni.wa.gov/verify/";
             driver.Manage().Window.Maximize();
@@ -108,13 +109,15 @@ namespace LicenseStatusChecker
                 Console.WriteLine("{0} has completed {1} credits and needs {2}", thisTradesman.LicenseNumber, numberOfCredits, thisTradesman.HoursNeeded);
                 if (thisTradesman.HoursNeeded > numberOfCredits)
                 {
-                    RecordLicensesToSend recordThis = new RecordLicensesToSend();
-                    StreamWriter sw = new StreamWriter(@"licensesToSend.txt", true);
-                    recordThis.record(thisTradesman.LicenseNumber, sw);
-                    sw.Close();
+                    tradesmenToSend.Add(thisTradesman);
+                    //RecordLicensesToSend recordThis = new RecordLicensesToSend();
+                    //StreamWriter sw = new StreamWriter(@"licensesToSend.txt", true);
+                    //recordThis.record(thisTradesman.LicenseNumber, sw);
+                    //sw.Close();
                 }
                 backButton.Click();
             }
+            return tradesmenToSend;
         }
     }
 }
