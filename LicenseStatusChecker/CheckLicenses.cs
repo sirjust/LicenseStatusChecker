@@ -17,10 +17,8 @@ namespace LicenseStatusChecker
         DateTime todaysDate = DateTime.Today;
         // string thisPath = System.IO.Directory.GetCurrentDirectory();
 
-        public void inputLicenses(List<string> licenses)
+        public void inputLicenses(List<Tradesman> tradesmanList)
         {
-            // there is an extra item in the list due to how I constructed it. The next line removes it
-            licenses.Remove("");
             // Console.WriteLine(thisPath);
             driver = new ChromeDriver(@"../../../packages/Selenium.Chrome.WebDriver.2.45/driver/");
             driver.Url = "https://secure.lni.wa.gov/verify/";
@@ -28,12 +26,10 @@ namespace LicenseStatusChecker
 
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
 
-            foreach (string license in licenses)
+            foreach (Tradesman thisTradesman in tradesmanList)
             {
                 // this sleep is here to allow time to change the data, otherwise there is a chance the same license could be entered twice and someone could be skipped
                 Task.Delay(1000).Wait();
-                Tradesman thisTradesman = new Tradesman();
-                thisTradesman.LicenseNumber = license;
 
                 // we input the license into the page and search
                 IWebElement searchDropdown = wait.Until<IWebElement>(d => d.FindElement(By.Id("selSearchType")));
@@ -41,7 +37,7 @@ namespace LicenseStatusChecker
                 IWebElement selectByLicense = wait.Until<IWebElement>(d => d.FindElement(By.Id("license")));
                 selectByLicense.Click();
                 IWebElement textSearchBox = wait.Until<IWebElement>(d => d.FindElement(By.Id("txtSearchBy")));
-                textSearchBox.SendKeys(license);
+                textSearchBox.SendKeys(thisTradesman.LicenseNumber);
                 IWebElement searchButton = wait.Until<IWebElement>(d => d.FindElement(By.Id("searchButton")));
                 searchButton.Click();
 

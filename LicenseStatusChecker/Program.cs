@@ -14,15 +14,18 @@ namespace LicenseStatusChecker
             //ConvertDataToList dataToList = new ConvertDataToList();
             //List<string> LicensesToCheck = dataToList.ConvertDataToStringList();
 
-            //CheckLicenses checkLicenses = new CheckLicenses();
-            //checkLicenses.inputLicenses(LicensesToCheck);
+
 
             //Console.WriteLine("The check has been completed.");
             //Console.Read();
             List<Tradesman> licenseList = new List<Tradesman>();
             WriteToExcelFile write = new WriteToExcelFile();
             readExcelFile read = new readExcelFile();
-            read.readSpreadSheet(FilePaths.readPath);
+            licenseList = read.readSpreadSheet(FilePaths.readPath);
+
+            CheckLicenses checkLicenses = new CheckLicenses();
+            checkLicenses.inputLicenses(licenseList);
+
             // write.WriteDataToFile();
 
             Console.Read();
