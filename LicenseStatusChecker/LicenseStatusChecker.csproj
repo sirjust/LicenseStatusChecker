@@ -65,13 +65,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CheckLicenses.cs" />
-    <Compile Include="ConvertDataToList.cs" />
     <Compile Include="FilePaths.cs" />
     <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="readExcelFile.cs" />
-    <Compile Include="RecordLicensesToSend.cs" />
     <Compile Include="Tradesman.cs" />
     <Compile Include="WriteToExcelFile.cs" />
   </ItemGroup>

@@ -21,6 +21,7 @@ namespace LicenseStatusChecker
         {
             // Console.WriteLine(thisPath);
             List<Tradesman> tradesmenToSend = new List<Tradesman>();
+            List<Tradesman> doNotSend = new List<Tradesman>();
             driver = new ChromeDriver(@"../../../packages/Selenium.Chrome.WebDriver.2.45/driver/");
             driver.Url = "https://secure.lni.wa.gov/verify/";
             driver.Manage().Window.Maximize();
@@ -57,6 +58,8 @@ namespace LicenseStatusChecker
                 if (daysTillExpiration > 90) // if the expiration date is far in the future, the tradesman has already renewed
                 {
                     Console.WriteLine("{0} has likely already renewed.", thisTradesman.LicenseNumber);
+                    thisTradesman.NotSendReason = "Already renewed";
+                    doNotSend.Add(thisTradesman);
                     backButton.Click();
                     continue;
                 }
@@ -68,6 +71,8 @@ namespace LicenseStatusChecker
                 {
                     // if the license is expired or inactive, we move on
                     Console.WriteLine("{0} is not active.", thisTradesman.LicenseNumber);
+                    thisTradesman.NotSendReason = "Not active";
+                    doNotSend.Add(thisTradesman);
                     backButton.Click();
                     continue;
                 }
@@ -100,23 +105,35 @@ namespace LicenseStatusChecker
                 foreach (var item in allDataItems)
                 {
                     string data = item.GetAttribute("innerHTML");
+                    // if the dataItem represents a fine, we don't want it counted as credits
+                    if (data.Contains("$"))
+                    {
+                        continue;
+                    }
                     int index = data.IndexOf(" ");
                     if (index > 0)
                         data = data.Substring(0, index);
                     coursesTaken.Add(data);
                     numberOfCredits += Convert.ToDouble(data);
                 }
-                Console.WriteLine("{0} has completed {1} credits and needs {2}", thisTradesman.LicenseNumber, numberOfCredits, thisTradesman.HoursNeeded);
-                if (thisTradesman.HoursNeeded > numberOfCredits)
+                thisTradesman.HoursCompleted = numberOfCredits;
+                Console.WriteLine("{0} has completed {1} credits and needs {2}", thisTradesman.LicenseNumber, thisTradesman.HoursCompleted, thisTradesman.HoursNeeded);
+                if (thisTradesman.HoursNeeded <= numberOfCredits)
                 {
-                    tradesmenToSend.Add(thisTradesman);
-                    //RecordLicensesToSend recordThis = new RecordLicensesToSend();
-                    //StreamWriter sw = new StreamWriter(@"licensesToSend.txt", true);
-                    //recordThis.record(thisTradesman.LicenseNumber, sw);
-                    //sw.Close();
+                    // if they have enough credits
+                    Console.WriteLine("{0} has enough credits.", thisTradesman.LicenseNumber);
+                    thisTradesman.NotSendReason = "CEUs completed";
+                    doNotSend.Add(thisTradesman);
+                    backButton.Click();
+                    continue;
                 }
+                tradesmenToSend.Add(thisTradesman);
                 backButton.Click();
             }
+            // here we document who will not receive a postcard and the reason why
+            // i chose to do this here because i cannot return two values from the function
+            WriteToExcelFile write = new WriteToExcelFile();
+            write.WriteDataToFile(doNotSend, FilePaths.doNotSendPath);
             return tradesmenToSend;
         }
     }

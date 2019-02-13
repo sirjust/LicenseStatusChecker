@@ -1,5 +1,7 @@
-﻿using System;
+﻿using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,12 +12,6 @@ namespace LicenseStatusChecker
     {
         static void Main(string[] args)
         {
-            //Console.WriteLine("Please enter the licenses you would like checked.");
-            //ConvertDataToList dataToList = new ConvertDataToList();
-            //List<string> LicensesToCheck = dataToList.ConvertDataToStringList();
-
-
-
             List<Tradesman> licenseList = new List<Tradesman>();
             WriteToExcelFile write = new WriteToExcelFile();
             readExcelFile read = new readExcelFile();
@@ -24,17 +20,10 @@ namespace LicenseStatusChecker
             CheckLicenses checkLicenses = new CheckLicenses();
             List<Tradesman> tradesmenToSend = checkLicenses.inputLicenses(licenseList);
 
-            write.WriteDataToFile(tradesmenToSend);
+            write.WriteDataToFile(tradesmenToSend, FilePaths.sendPath);
 
             Console.WriteLine("The check has been completed.");
             Console.Read();
-
-            // this code verifies the raw data has been turned into a list we can work with
-            // we can use it later to verify all data has been mapped
-            //foreach(string license in LicensesToCheck)
-            //{
-            //    Console.WriteLine(license);
-            //}
         }
     }
 }

@@ -22,6 +22,8 @@ namespace LicenseStatusChecker
         // we will verify trade in the web application
         public string Trade { get; set; }
         public int HoursNeeded { get; set; }
+        public double HoursCompleted { get; set; }
+        public string NotSendReason { get; set; }
 
         public int GetHoursNeeded(string trade)
         {
