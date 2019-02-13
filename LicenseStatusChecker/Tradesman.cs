@@ -17,7 +17,7 @@ namespace LicenseStatusChecker
         public string City { get; set; }
         public string State { get; set; }
         public string Zip { get; set; }
-        public string ExpirationDateFromSpreadSheet { get; set; }
+        public string ExpirationDate { get; set; }
 
         // we will verify trade in the web application
         public string Trade { get; set; }

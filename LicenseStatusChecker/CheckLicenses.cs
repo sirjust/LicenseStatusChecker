@@ -59,6 +59,7 @@ namespace LicenseStatusChecker
                 {
                     Console.WriteLine("{0} has likely already renewed.", thisTradesman.LicenseNumber);
                     thisTradesman.NotSendReason = "Already renewed";
+                    thisTradesman.ExpirationDate = expirationDate.ToString();
                     doNotSend.Add(thisTradesman);
                     backButton.Click();
                     continue;

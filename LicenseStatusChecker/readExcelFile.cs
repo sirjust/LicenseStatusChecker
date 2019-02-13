@@ -35,8 +35,8 @@ namespace LicenseStatusChecker
                     var wsRow = sheet.Cells[rowNum, 1, rowNum, sheet.Dimension.End.Column];
                     var rawData = wsRow.Value;
                     tradesman.LicenseNumber = ((object[,])rawData)[0, 1].ToString();
-                    tradesman.ExpirationDateFromSpreadSheet = ((object[,])rawData)[0, 8].ToString();
-                    DateTime expirationDate = DateTime.Parse(tradesman.ExpirationDateFromSpreadSheet);
+                    tradesman.ExpirationDate = ((object[,])rawData)[0, 8].ToString();
+                    DateTime expirationDate = DateTime.Parse(tradesman.ExpirationDate);
                     int daysTillExpiration = expirationDate.Subtract(DateTime.Today).Days;
                     if (daysTillExpiration > 90)
                     {
