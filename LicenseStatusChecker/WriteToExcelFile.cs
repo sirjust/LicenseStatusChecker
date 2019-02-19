@@ -23,8 +23,9 @@ namespace LicenseStatusChecker
                 worksheet.Cells["D" + cellCounter].Value = "Address1";
                 worksheet.Cells["E" + cellCounter].Value = "Address2";
                 worksheet.Cells["F" + cellCounter].Value = "City";
-                worksheet.Cells["G" + cellCounter].Value = "Zip";
-                worksheet.Cells["H" + cellCounter].Value = "ExpirationDate";
+                worksheet.Cells["G" + cellCounter].Value = "State";
+                worksheet.Cells["H" + cellCounter].Value = "Zip";
+                worksheet.Cells["I" + cellCounter].Value = "ExpirationDate";
                 cellCounter++;
                 foreach (Tradesman licenseHolder in licenses)
                 {
@@ -34,11 +35,12 @@ namespace LicenseStatusChecker
                     worksheet.Cells["D" + cellCounter].Value = licenseHolder.Address1;
                     worksheet.Cells["E" + cellCounter].Value = licenseHolder.Address2;
                     worksheet.Cells["F" + cellCounter].Value = licenseHolder.City;
-                    worksheet.Cells["G" + cellCounter].Value = licenseHolder.Zip;
-                    worksheet.Cells["H" + cellCounter].Value = licenseHolder.ExpirationDate;
+                    worksheet.Cells["G" + cellCounter].Value = licenseHolder.State;
+                    worksheet.Cells["H" + cellCounter].Value = licenseHolder.Zip;
+                    worksheet.Cells["I" + cellCounter].Value = licenseHolder.ExpirationDate;
                     if (licenseHolder.NotSendReason != null)
                     {
-                        worksheet.Cells["I" + cellCounter].Value = licenseHolder.NotSendReason;
+                        worksheet.Cells["J" + cellCounter].Value = licenseHolder.NotSendReason;
                     }
                     cellCounter++;
                 }

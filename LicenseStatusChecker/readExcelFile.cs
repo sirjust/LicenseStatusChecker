@@ -34,8 +34,19 @@ namespace LicenseStatusChecker
                     Tradesman tradesman = new Tradesman();
                     var wsRow = sheet.Cells[rowNum, 1, rowNum, sheet.Dimension.End.Column];
                     var rawData = wsRow.Value;
-                    tradesman.LicenseNumber = ((object[,])rawData)[0, 1].ToString();
-                    tradesman.ExpirationDate = ((object[,])rawData)[0, 8].ToString();
+                    try
+                    {
+                        tradesman.LicenseNumber = ((object[,])rawData)[0, 1].ToString();
+                        tradesman.ExpirationDate = ((object[,])rawData)[0, 8].ToString();
+                    }
+                    catch(NullReferenceException ex)
+                    {
+                        Logger logger = new Logger();
+                        StreamWriter sw = new StreamWriter(@"exceptionLog.txt", true);
+                        logger.writeErrorsToLog($"{ex}\n" + "This tradesman has either no license number or no expiration date.", sw);
+                        sw.Close();
+                        continue;
+                    }
                     DateTime expirationDate = DateTime.Parse(tradesman.ExpirationDate);
                     int daysTillExpiration = expirationDate.Subtract(DateTime.Today).Days;
                     if (daysTillExpiration > 90)
@@ -56,22 +67,33 @@ namespace LicenseStatusChecker
                         sw.Close();
                         continue;
                     }
-                    tradesman.LicenseType = ((object[,])rawData)[0, 0].ToString();
-                    tradesman.Name = ((object[,])rawData)[0, 2].ToString();
-                    tradesman.Address1 = ((object[,])rawData)[0, 3].ToString();
-                    if (((object[,])rawData)[0, 4] != null)
+                    try
                     {
-                        tradesman.Address2 = ((object[,])rawData)[0, 4].ToString();
+                        tradesman.LicenseType = ((object[,])rawData)[0, 0].ToString();
+                        tradesman.Name = ((object[,])rawData)[0, 2].ToString();
+                        tradesman.Address1 = ((object[,])rawData)[0, 3].ToString();
+                        if (((object[,])rawData)[0, 4] != null)
+                        {
+                            tradesman.Address2 = ((object[,])rawData)[0, 4].ToString();
+                        }
+                        tradesman.City = ((object[,])rawData)[0, 5].ToString();
+                        if (((object[,])rawData)[0, 6] != null)
+                        {
+                            tradesman.State = ((object[,])rawData)[0, 6].ToString();
+                        }
+
+                        tradesman.Zip = ((object[,])rawData)[0, 7].ToString();
+
+                        tradesmen.Add(tradesman);
                     }
-                    tradesman.City = ((object[,])rawData)[0, 5].ToString();
-                    if (((object[,])rawData)[0, 6] != null)
+                    catch(NullReferenceException ex)
                     {
-                        tradesman.State = ((object[,])rawData)[0, 6].ToString();
+                        Logger logger = new Logger();
+                        StreamWriter sw = new StreamWriter(@"exceptionLog.txt", true);
+                        logger.writeErrorsToLog($"{ex}\n" + $"{tradesman.LicenseNumber}'s record has null or incorrect values.", sw);
+                        sw.Close();
+                        continue;
                     }
-
-                    tradesman.Zip = ((object[,])rawData)[0, 7].ToString();
-
-                    tradesmen.Add(tradesman);
                 }
             }
             return tradesmen;
