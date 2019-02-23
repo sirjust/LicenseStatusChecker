@@ -17,18 +17,13 @@ namespace LicenseStatusChecker
             readExcelFile read = new readExcelFile();
             licenseList = read.readSpreadSheet(FilePaths.readPath);
             CheckLicenses checkLicenses = new CheckLicenses();
-            List<List<Tradesman>> tradesmenToSend = new List<List<Tradesman>>();
+            List<Tradesman> tradesmenToSend = new List<Tradesman>();
+            tradesmenToSend = checkLicenses.inputLicenses(licenseList);
 
-            //foreach(List<Tradesman> tradeList in licenseList)
-            //{
-            //    tradesmenToSend = checkLicenses.inputLicenses(licenseList);
-            //}
+            write.WriteDataToFile(tradesmenToSend, FilePaths.sendPath);
 
-
-            //write.WriteDataToFile(tradesmenToSend, FilePaths.sendPath);
-
-            //Console.WriteLine("The check has been completed.");
-            //Console.Read();
+            Console.WriteLine("The check has been completed.");
+            Console.Read();
         }
     }
 }
