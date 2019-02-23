@@ -12,18 +12,23 @@ namespace LicenseStatusChecker
     {
         static void Main(string[] args)
         {
-            List<Tradesman> licenseList = new List<Tradesman>();
+            List<List<Tradesman>> licenseList = new List<List<Tradesman>>();
             WriteToExcelFile write = new WriteToExcelFile();
             readExcelFile read = new readExcelFile();
             licenseList = read.readSpreadSheet(FilePaths.readPath);
-
             CheckLicenses checkLicenses = new CheckLicenses();
-            List<Tradesman> tradesmenToSend = checkLicenses.inputLicenses(licenseList);
+            List<List<Tradesman>> tradesmenToSend = new List<List<Tradesman>>();
 
-            write.WriteDataToFile(tradesmenToSend, FilePaths.sendPath);
+            //foreach(List<Tradesman> tradeList in licenseList)
+            //{
+            //    tradesmenToSend = checkLicenses.inputLicenses(licenseList);
+            //}
 
-            Console.WriteLine("The check has been completed.");
-            Console.Read();
+
+            //write.WriteDataToFile(tradesmenToSend, FilePaths.sendPath);
+
+            //Console.WriteLine("The check has been completed.");
+            //Console.Read();
         }
     }
 }
