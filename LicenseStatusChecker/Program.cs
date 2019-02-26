@@ -12,6 +12,7 @@ namespace LicenseStatusChecker
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("The program started at {0}.", DateTime.Now);
             List<List<Tradesman>> licenseList = new List<List<Tradesman>>();
             WriteToExcelFile write = new WriteToExcelFile();
             readExcelFile read = new readExcelFile();
@@ -23,6 +24,7 @@ namespace LicenseStatusChecker
             write.WriteDataToFile(tradesmenToSend, FilePaths.sendPath);
 
             Console.WriteLine("The check has been completed.");
+            Console.WriteLine("The program successfully completed at {0}.", DateTime.Now);
             Console.Read();
         }
     }
