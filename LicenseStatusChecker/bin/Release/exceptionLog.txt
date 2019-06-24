@@ -1,0 +1,1231 @@
+
+Log Entry : 9:39:14 PM Thursday, March 14, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 9:42:45 PM Thursday, March 14, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 10:38:33 AM Monday, March 25, 2019
+OpenQA.Selenium.WebDriverException: unknown error: Element <table class="itemLink" title="View details for AMOS, SEAN C">...</table> is not clickable at point (821, 249). Other element would receive the click: <a href="https://lni.wa.gov/WorkplaceRights/Rules/">...</a>
+  (Session info: chrome=72.0.3626.121)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.17134 x86_64)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 50
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 11:13:47 AM Monday, March 25, 2019
+OpenQA.Selenium.WebDriverException: unknown error: Element <table class="itemLink" title="View details for ADAMS, MICHAEL A">...</table> is not clickable at point (821, 244). Other element would receive the click: <a href="https://lni.wa.gov/WorkplaceRights/Rules/">...</a>
+  (Session info: chrome=72.0.3626.121)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.17134 x86_64)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Click()
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 50
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 11:28:12 AM Monday, March 25, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 11:30:06 AM Monday, March 25, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 9:00:04 PM Friday, April 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 9:36:08 PM Friday, April 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 9:38:36 PM Friday, April 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 9:38:41 PM Friday, April 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 9:38:56 PM Friday, April 5, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"class name","selector":"itemLink"}
+  (Session info: chrome=73.0.3683.86)
+  (Driver info: chromedriver=2.45.615291 (ec3682e3c9061c10f26ea9e5cdcf3c53f3f74387),platform=Windows NT 10.0.17134 x86_64)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByClassName(String className)
+   at OpenQA.Selenium.By.<>c__DisplayClass20_0.<ClassName>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_4(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 50
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 50
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 11:21:22 AM Monday, April 15, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 11:42:06 AM Monday, April 15, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 11:52:38 AM Monday, April 15, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 12:43:39 PM Monday, April 15, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 10:00:16 PM Thursday, April 25, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 10:00:54 PM Thursday, April 25, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 4:47:26 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 4:47:30 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 4:47:34 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 4:48:05 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 4:54:58 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 4:55:11 PM Sunday, May 5, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"id","selector":"ExpirationDate"}
+  (Session info: chrome=74.0.3729.131)
+  (Driver info: chromedriver=74.0.3729.6 (255758eccf3d244491b8a1317aa76e1ce10d57e9-refs/branch-heads/3729@{#29}),platform=Windows NT 10.0.17134 x86_64)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_5(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 54
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:00:30 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:02:21 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:02:31 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:02:34 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:02:37 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:02:53 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:05:59 PM Sunday, May 5, 2019
+OpenQA.Selenium.WebDriverException: Failed to decode response from marionette
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_0(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 41
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 41
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:06:50 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:07:10 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:07:20 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:07:26 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:16:40 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:32:57 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:41:00 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:41:09 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:41:25 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:46:10 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:02:03 PM Sunday, May 5, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: #ExpirationDate
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_5(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 7:01:05 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 7:01:21 PM Sunday, May 5, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 7:23:27 PM Sunday, May 5, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: #ExpirationDate
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_5(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 10:07:49 PM Wednesday, May 15, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 10:40:13 PM Wednesday, May 15, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: #ExpirationDate
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_5(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 11:09:06 PM Wednesday, May 15, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: #ExpirationDate
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_5(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 55
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 10:32:19 AM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_7(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 73
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 73
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 10:32:35 AM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_7(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 73
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 73
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 10:32:49 AM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_7(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 73
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 73
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:49:16 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:49:20 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:49:37 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:49:41 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:49:56 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:50:11 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:50:15 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:50:24 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:50:40 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:50:49 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:50:53 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 5:57:46 PM Sunday, May 26, 2019
+OpenQA.Selenium.Support.UI.UnexpectedTagNameException: Element should have been select but was option
+   at OpenQA.Selenium.Support.UI.SelectElement..ctor(IWebElement element)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 51
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:13:21 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:18:54 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:18:59 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:19:05 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:19:20 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:19:24 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:19:30 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:19:36 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:19:43 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:19:50 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:19:56 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:20:17 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 77
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:20:22 PM Sunday, May 26, 2019
+OpenQA.Selenium.NoSuchWindowException: Browsing context has been discarded
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.GetAttribute(String attributeName)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 59
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:24:46 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:25:06 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:25:25 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:25:45 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:26:04 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:26:24 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:26:43 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:27:12 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:27:31 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:28:00 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:28:20 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: /html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_8(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 78
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 6:28:21 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverException: Failed to decode response from marionette
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_0(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 41
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 41
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 7:03:41 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverException: Failed to decode response from marionette
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.Execute(String commandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebElement.GetAttribute(String attributeName)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 60
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 7:18:13 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 60
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 7:24:38 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 60
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 7:33:47 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 60
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 7:34:16 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: #ExpirationDate
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_6(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 60
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 60
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 7:38:20 PM Sunday, May 26, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: #ExpirationDate
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_6(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 60
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 60
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 7:45:35 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 60
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 7:53:31 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 60
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 7:53:42 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 60
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 8:30:09 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 60
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 9:00:15 PM Sunday, May 26, 2019
+System.FormatException: String was not recognized as a valid DateTime.
+   at System.DateTimeParse.Parse(String s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.DateTime.Parse(String s)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 60
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 10:48:05 Monday, June 24, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: .itemLink
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByClassName(String className)
+   at OpenQA.Selenium.By.<>c__DisplayClass20_0.<ClassName>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_4(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 51
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 51
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 11:29:48 Monday, June 24, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: .itemLink
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByClassName(String className)
+   at OpenQA.Selenium.By.<>c__DisplayClass20_0.<ClassName>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_4(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 51
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 51
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 11:33:35 Monday, June 24, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: .itemLink
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByClassName(String className)
+   at OpenQA.Selenium.By.<>c__DisplayClass20_0.<ClassName>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_4(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 51
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 51
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 12:00:26 Monday, June 24, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: .itemLink
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByClassName(String className)
+   at OpenQA.Selenium.By.<>c__DisplayClass20_0.<ClassName>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_4(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 51
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 51
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 12:16:21 Monday, June 24, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: .itemLink
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByClassName(String className)
+   at OpenQA.Selenium.By.<>c__DisplayClass20_0.<ClassName>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_4(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 51
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 51
+There was a Selenium error.
+-------------------------------
+
+Log Entry : 12:23:14 Monday, June 24, 2019
+OpenQA.Selenium.WebDriverTimeoutException: Timed out after 10 seconds ---> OpenQA.Selenium.NoSuchElementException: Unable to locate element: .itemLink
+   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByClassName(String className)
+   at OpenQA.Selenium.By.<>c__DisplayClass20_0.<ClassName>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at LicenseStatusChecker.CheckLicenses.<>c.<inputLicenses>b__2_4(IWebDriver d) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 51
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   --- End of inner exception stack trace ---
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.ThrowTimeoutException(String exceptionMessage, Exception lastException)
+   at OpenQA.Selenium.Support.UI.DefaultWait`1.Until[TResult](Func`2 condition)
+   at LicenseStatusChecker.CheckLicenses.inputLicenses(List`1 tradesmanList) in C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\CheckLicenses.cs:line 51
+There was a Selenium error.
+-------------------------------

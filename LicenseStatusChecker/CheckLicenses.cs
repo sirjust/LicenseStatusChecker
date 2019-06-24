@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using OpenQA.Selenium.Firefox;
 
 namespace LicenseStatusChecker
 {
@@ -22,7 +23,7 @@ namespace LicenseStatusChecker
             // Console.WriteLine(thisPath);
             List<Tradesman> tradesmenToSend = new List<Tradesman>();
             List<Tradesman> doNotSend = new List<Tradesman>();
-            driver = new ChromeDriver(@"../../../packages/Selenium.Chrome.WebDriver.2.45/driver/");
+            driver = new FirefoxDriver(@"../../../packages/Selenium.Firefox.WebDriver.0.24.0/driver/");
             driver.Url = "https://secure.lni.wa.gov/verify/";
             driver.Manage().Window.Maximize();
 
@@ -50,6 +51,11 @@ namespace LicenseStatusChecker
                         IWebElement resultsTable = wait.Until<IWebElement>(d => d.FindElement(By.ClassName("itemLink")));
                         resultsTable.Click();
 
+                        Thread.Sleep(3000);
+                        // they added a license dropdown element in May2019, we need to click it
+                        IWebElement licenseElement = wait.Until(d => d.FindElement(By.Id("license")));
+                        licenseElement.Click();
+
                         // now we check the license's expiration date
                         IWebElement expirationDateElement = wait.Until<IWebElement>(d => d.FindElement(By.Id("ExpirationDate")));
                         // this delay is here because there was an exception while parsing on the next line if it ran too quickly
@@ -69,7 +75,7 @@ namespace LicenseStatusChecker
                         }
 
                         // now we check if the license is currently valid
-                        IWebElement licenseValidity = wait.Until<IWebElement>(d => d.FindElement(By.XPath("/html[1]/body[1]/div[1]/div[5]/div[2]/div[5]/div[4]/span[1]/strong[1]")));
+                        IWebElement licenseValidity = wait.Until<IWebElement>(d => d.FindElement(By.XPath("/html[1]/body[1]/div[1]/div[5]/div[2]/div[7]/div[4]/span[1]/strong[1]")));
                         string isActive = licenseValidity.GetAttribute("innerHTML");
                         if (isActive != "Active.")
                         {
@@ -137,13 +143,13 @@ namespace LicenseStatusChecker
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("There was an error with {0}.", thisTradesman.LicenseNumber);
+                        Console.WriteLine("There was a {0} with {1}.", ex.Message, thisTradesman.LicenseNumber);
                         Logger logger = new Logger();
                         StreamWriter sw = new StreamWriter(@"exceptionLog.txt", true);
                         logger.writeErrorsToLog($"{ex}\n" + "There was a Selenium error.", sw);
                         sw.Close();
-                        IWebElement backButton = wait.Until(d => d.FindElement(By.Id("backBtn")));
-                        backButton.Click();
+                        // if there is an error we navigate back to the original url and keep going
+                        driver.Url = "https://secure.lni.wa.gov/verify/";
                         continue;
                     }
                     // here we document who will not receive a postcard and the reason why
