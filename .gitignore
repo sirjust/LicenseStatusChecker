@@ -1,6 +1,9 @@
 /packages
 Debug/
 /Files
+/bin
+/obj
+.vs/
 
 LoginInfo.cs
 .xlsx
