@@ -1,4 +1,5 @@
 ﻿using OfficeOpenXml;
+using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -17,9 +18,12 @@ namespace LicenseStatusChecker
             WriteToExcelFile write = new WriteToExcelFile();
             readExcelFile read = new readExcelFile();
             licenseList = read.readSpreadSheet(FilePaths.readPath);
-            CheckLicenses checkLicenses = new CheckLicenses();
-            List<Tradesman> tradesmenToSend = new List<Tradesman>();
-            tradesmenToSend = checkLicenses.inputLicenses(licenseList);
+            //CheckLicenses checkLicenses = new CheckLicenses();
+            //var tradesmenToSend = checkLicenses.inputLicenses(licenseList);
+
+            var driver = new FirefoxDriver(@"../../../packages/Selenium.Firefox.WebDriver.0.24.0/driver/");
+            LicenseChecker checker = new LicenseChecker(driver, DateTime.Today, licenseList);
+            var tradesmenToSend = checker.InputLicenses();
 
             write.WriteDataToFile(tradesmenToSend, FilePaths.sendPath);
 

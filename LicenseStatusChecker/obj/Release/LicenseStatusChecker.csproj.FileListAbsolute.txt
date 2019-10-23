@@ -14,3 +14,5 @@ C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Rele
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Release\LicenseStatusChecker.csproj.CopyComplete
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Release\LicenseStatusChecker.exe
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Release\LicenseStatusChecker.pdb
+C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\System.ValueTuple.dll
+C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\System.ValueTuple.xml
