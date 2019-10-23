@@ -53,8 +53,8 @@ namespace LicenseStatusChecker
 
                         Thread.Sleep(3000);
                         // they added a license dropdown element in May2019, we need to click it
-                        IWebElement licenseElement = wait.Until(d => d.FindElement(By.Id("license")));
-                        licenseElement.Click();
+                        //IWebElement licenseElement = wait.Until(d => d.FindElement(By.Id("license")));
+                        //licenseElement.Click();
 
                         // now we check the license's expiration date
                         IWebElement expirationDateElement = wait.Until<IWebElement>(d => d.FindElement(By.Id("ExpirationDate")));
@@ -75,9 +75,9 @@ namespace LicenseStatusChecker
                         }
 
                         // now we check if the license is currently valid
-                        IWebElement licenseValidity = wait.Until<IWebElement>(d => d.FindElement(By.XPath("/html[1]/body[1]/div[1]/div[5]/div[2]/div[7]/div[4]/span[1]/strong[1]")));
+                        IWebElement licenseValidity = wait.Until<IWebElement>(d => d.FindElement(By.XPath("//*[@id='StatusDescription']/strong")));
                         string isActive = licenseValidity.GetAttribute("innerHTML");
-                        if (isActive != "Active.")
+                        if (isActive != "Active")
                         {
                             // if the license is expired or inactive, we move on
                             Console.WriteLine("{0} is not active.", thisTradesman.LicenseNumber);

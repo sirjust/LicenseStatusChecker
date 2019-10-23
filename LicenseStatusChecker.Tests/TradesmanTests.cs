@@ -18,7 +18,6 @@ namespace LicenseStatusChecker.Tests
 
             // Assert
             Assert.AreEqual(expected, actual);
-
         }
     }
 }
