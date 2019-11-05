@@ -120,7 +120,7 @@ namespace LicenseStatusChecker
                     }
                     // here we document who will not receive a postcard and the reason why
                     // i chose to do this here because i cannot return two values from the function
-                    WriteToExcelFile write = new WriteToExcelFile();
+                    ExcelFileWriter write = new ExcelFileWriter();
                     write.WriteDataToFile(doNotSend, FilePaths.doNotSendPath);
                 }
             }

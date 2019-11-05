@@ -13,22 +13,22 @@ namespace LicenseStatusChecker
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("The program started at {0}.", DateTime.Now);
+            var now = DateTime.Now;
             List<List<Tradesman>> licenseList = new List<List<Tradesman>>();
-            WriteToExcelFile write = new WriteToExcelFile();
-            readExcelFile read = new readExcelFile();
-            licenseList = read.readSpreadSheet(FilePaths.readPath);
-            //CheckLicenses checkLicenses = new CheckLicenses();
-            //var tradesmenToSend = checkLicenses.inputLicenses(licenseList);
+            ExcelFileWriter writer = new ExcelFileWriter();
+            ExcelFileReader reader = new ExcelFileReader();
+
+            Console.WriteLine($"The program started at {now}.");
+            licenseList = reader.readSpreadSheet(FilePaths.readPath);
 
             var driver = new FirefoxDriver(@"../../../packages/Selenium.Firefox.WebDriver.0.24.0/driver/");
-            LicenseChecker checker = new LicenseChecker(driver, DateTime.Today, licenseList);
+            LicenseChecker checker = new LicenseChecker(driver, now, licenseList);
             var tradesmenToSend = checker.InputLicenses();
 
-            write.WriteDataToFile(tradesmenToSend, FilePaths.sendPath);
+            writer.WriteDataToFile(tradesmenToSend, FilePaths.sendPath);
 
             Console.WriteLine("The check has been completed.");
-            Console.WriteLine("The program successfully completed at {0}.", DateTime.Now);
+            Console.WriteLine($"The program successfully completed at {DateTime.Now}.");
             Console.Read();
         }
     }

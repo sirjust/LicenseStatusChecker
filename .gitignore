@@ -4,6 +4,7 @@ Debug/
 /bin
 /obj
 .vs/
+bin/
 
 LoginInfo.cs
 .xlsx

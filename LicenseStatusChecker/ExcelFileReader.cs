@@ -11,7 +11,7 @@ using AODL.Document.SpreadsheetDocuments;
 
 namespace LicenseStatusChecker
 {
-    public class readExcelFile
+    public class ExcelFileReader
     {
         public List<List<Tradesman>> readSpreadSheet(string spreadSheetLocation)
         {

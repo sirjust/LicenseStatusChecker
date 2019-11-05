@@ -8,7 +8,7 @@ using OfficeOpenXml;
 
 namespace LicenseStatusChecker
 {
-    class WriteToExcelFile
+    class ExcelFileWriter
     {
         public void WriteDataToFile(List<Tradesman> licenses, string path)
         {
