@@ -1,6 +1,7 @@
 /packages
 Debug/
-/Files
+Release/
+Files/
 /bin
 /obj
 .vs/

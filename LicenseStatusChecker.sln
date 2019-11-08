@@ -1,11 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2003
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseStatusChecker", "LicenseStatusChecker\LicenseStatusChecker.csproj", "{61D1BBBB-957B-4253-818A-F7AC2D63BBE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseStatusChecker.Tests", "LicenseStatusChecker.Tests\LicenseStatusChecker.Tests.csproj", "{1CF6A432-C083-43DD-A086-647A27D88FC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseStatusChecker.Tests", "LicenseStatusChecker.Tests\LicenseStatusChecker.Tests.csproj", "{757BADC3-DA69-4226-AF23-5D9CA817697D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{61D1BBBB-957B-4253-818A-F7AC2D63BBE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61D1BBBB-957B-4253-818A-F7AC2D63BBE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61D1BBBB-957B-4253-818A-F7AC2D63BBE0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1CF6A432-C083-43DD-A086-647A27D88FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1CF6A432-C083-43DD-A086-647A27D88FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1CF6A432-C083-43DD-A086-647A27D88FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1CF6A432-C083-43DD-A086-647A27D88FC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{757BADC3-DA69-4226-AF23-5D9CA817697D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{757BADC3-DA69-4226-AF23-5D9CA817697D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{757BADC3-DA69-4226-AF23-5D9CA817697D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{757BADC3-DA69-4226-AF23-5D9CA817697D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

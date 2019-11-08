@@ -4,9 +4,11 @@ C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Rele
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\AODL.dll
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\EPPlus.dll
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\ICSharpCode.SharpZipLib.dll
+C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\System.ValueTuple.dll
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\WebDriver.dll
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\WebDriver.Support.dll
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\EPPlus.xml
+C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\System.ValueTuple.xml
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\WebDriver.xml
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\WebDriver.Support.xml
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Release\LicenseStatusChecker.csprojAssemblyReference.cache
@@ -14,5 +16,3 @@ C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Rele
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Release\LicenseStatusChecker.csproj.CopyComplete
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Release\LicenseStatusChecker.exe
 C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\obj\Release\LicenseStatusChecker.pdb
-C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\System.ValueTuple.dll
-C:\Users\SirJUST\source\repos\LicenseStatusChecker\LicenseStatusChecker\bin\Release\System.ValueTuple.xml
