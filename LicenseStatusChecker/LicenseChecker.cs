@@ -18,13 +18,15 @@ namespace LicenseStatusChecker
         DateTime _todaysDate = DateTime.Today;
         List<List<Tradesman>> _tradesmen;
         WebDriverWait _wait;
+        ILogger _logger;
 
-        public LicenseChecker(IWebDriver driver, DateTime today, List<List<Tradesman>> tradesmen)
+        public LicenseChecker(IWebDriver driver, DateTime today, List<List<Tradesman>> tradesmen, ILogger logger)
         {
             _driver = driver;
             _todaysDate = today;
             _tradesmen = tradesmen;
             _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
+            _logger = logger;
         }
 
         public List<Tradesman> InputLicenses()
@@ -112,10 +114,7 @@ namespace LicenseStatusChecker
                     catch (Exception ex)
                     {
                         Console.WriteLine("There was a {0} with {1}.", ex.Message, tradesman.LicenseNumber);
-                        Logger logger = new Logger();
-                        StreamWriter sw = new StreamWriter(@"exceptionLog.txt", true);
-                        logger.writeErrorsToLog($"{ex}\n" + "There was a Selenium error.", sw);
-                        sw.Close();
+                        _logger.WriteErrorsToLog($"{ex}\n" + "There was a Selenium error.", FilePaths.exceptionLog);
                         continue;
                     }
                     // here we document who will not receive a postcard and the reason why

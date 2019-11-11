@@ -7,15 +7,22 @@ using System.Threading.Tasks;
 
 namespace LicenseStatusChecker
 {
-    public class Logger
+    public class Logger : ILogger
     {
-        public void writeErrorsToLog(string logMessage, TextWriter sw)
+        public void WriteErrorsToLog(string logMessage, string path)
         {
+            var sw = new StreamWriter(path, true);
             sw.Write("\r\nLog Entry : ");
             sw.WriteLine("{0} {1}", DateTime.Now.ToLongTimeString(),
                 DateTime.Now.ToLongDateString());
             sw.WriteLine(logMessage);
             sw.WriteLine("-------------------------------");
+            sw.Close();
+        }
+
+        public void WriteToConsole(string message)
+        {
+            Console.WriteLine(message);
         }
     }
 }

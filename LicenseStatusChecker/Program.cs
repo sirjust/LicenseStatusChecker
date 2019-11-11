@@ -15,14 +15,14 @@ namespace LicenseStatusChecker
         {
             var now = DateTime.Now;
             List<List<Tradesman>> licenseList = new List<List<Tradesman>>();
+            ExcelFileReader reader = new ExcelFileReader(new Logger());
             ExcelFileWriter writer = new ExcelFileWriter();
-            ExcelFileReader reader = new ExcelFileReader();
 
             Console.WriteLine($"The program started at {now}.");
-            licenseList = reader.readSpreadSheet(FilePaths.readPath);
+            licenseList = reader.ReadSpreadSheet(FilePaths.readPath);
 
-            var driver = new FirefoxDriver(@"../../../packages/Selenium.Firefox.WebDriver.0.24.0/driver/");
-            LicenseChecker checker = new LicenseChecker(driver, now, licenseList);
+            var driver = new FirefoxDriver(FilePaths.driverLocation);
+            LicenseChecker checker = new LicenseChecker(driver, now, licenseList, new Logger());
             var tradesmenToSend = checker.InputLicenses();
 
             writer.WriteDataToFile(tradesmenToSend, FilePaths.sendPath);

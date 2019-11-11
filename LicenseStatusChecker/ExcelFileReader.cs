@@ -13,19 +13,29 @@ namespace LicenseStatusChecker
 {
     public class ExcelFileReader
     {
-        public List<List<Tradesman>> readSpreadSheet(string spreadSheetLocation)
+        int errorCount { get; set; }
+        ILogger _logger;
+        public ExcelFileReader(ILogger logger)
         {
+            _logger = logger;
+            errorCount = 0;
+        }
+        public List<List<Tradesman>> ReadSpreadSheet(string spreadSheetLocation)
+        {
+            _logger.WriteToConsole("The program is now reading the spreadsheet.\n-----");
             List<List<Tradesman>> ListOfTradesmen = new List<List<Tradesman>>(5);
             var pck = new OfficeOpenXml.ExcelPackage();
             pck.Load(new System.IO.FileInfo(FilePaths.readPath).OpenRead());
             if (pck.Workbook.Worksheets.Count != 0)
             {
                 int worksheetCount = pck.Workbook.Worksheets.Count;
+                // The OpenXML library is 1-based in this environment
                 for(int i= 1; i<= worksheetCount; i++)
                 {
                     // the second list is not yet instantiated, here we instantiate one for each sheet
                     ListOfTradesmen.Add(new List<Tradesman>());
                     var sheet = pck.Workbook.Worksheets[i];
+
                     var hasHeader = true;
                     var startRow = hasHeader ? 2 : 1;
                     for (var rowNum = startRow; rowNum <= sheet.Dimension.End.Row; rowNum++)
@@ -40,10 +50,9 @@ namespace LicenseStatusChecker
                         }
                         catch (NullReferenceException ex)
                         {
-                            Logger logger = new Logger();
-                            StreamWriter sw = new StreamWriter(@"exceptionLog.txt", true);
-                            logger.writeErrorsToLog($"{ex}\n" + "This tradesman has either no license number or no expiration date.", sw);
-                            sw.Close();
+                            string message = $"{ex}\n" + "This tradesman has either no license number or no expiration date.";
+                            _logger.WriteErrorsToLog(message, FilePaths.exceptionLog);
+                            errorCount++;
                             continue;
                         }
                         DateTime expirationDate = DateTime.Parse(tradesman.ExpirationDate);
@@ -51,19 +60,17 @@ namespace LicenseStatusChecker
                         if (daysTillExpiration > 90)
                         {
                             // log that this tradesman will not have the license checked
-                            Logger logger = new Logger();
-                            StreamWriter sw = new StreamWriter(@"greaterThan90.txt", true);
-                            logger.writeErrorsToLog($"{tradesman.LicenseNumber}'s expiration date is greater than 90.", sw);
-                            sw.Close();
+                            var message = $"{tradesman.LicenseNumber}'s expiration date is greater than 90.";
+                            _logger.WriteErrorsToLog(message, FilePaths.greaterThan90Log);
+                            errorCount++;
                             continue;
                         }
                         if (daysTillExpiration < 0)
                         {
                             // log that this tradesman will not have the license checked
-                            Logger logger = new Logger();
-                            StreamWriter sw = new StreamWriter(@"expired.txt", true);
-                            logger.writeErrorsToLog($"{tradesman.LicenseNumber}'s expiration date is in the past.", sw);
-                            sw.Close();
+                            var message = $"{tradesman.LicenseNumber}'s expiration date is in the past.";
+                            _logger.WriteErrorsToLog(message, FilePaths.expiredLog);
+                            errorCount++;
                             continue;
                         }
                         try
@@ -87,16 +94,26 @@ namespace LicenseStatusChecker
                         }
                         catch (NullReferenceException ex)
                         {
-                            Logger logger = new Logger();
-                            StreamWriter sw = new StreamWriter(@"exceptionLog.txt", true);
-                            logger.writeErrorsToLog($"{ex}\n" + $"{tradesman.LicenseNumber}'s record has null or incorrect values.", sw);
-                            sw.Close();
+                            var message = $"{ex}\n" + $"{tradesman.LicenseNumber}'s record has null or incorrect values.";
+                            _logger.WriteErrorsToLog(message, FilePaths.exceptionLog);
+                            errorCount++;
                             continue;
                         }
                     }
                 }
             }
+            int count = GetTradesmanCount(ListOfTradesmen);
+            _logger.WriteToConsole($"The program has finished reading the spreadsheet.\nThere were {errorCount} error(s), recorded in the logs.\nIt will now check {count} license(s).\n-----");
             return ListOfTradesmen;
+        }
+        private int GetTradesmanCount(List<List<Tradesman>> tradesmen)
+        {
+            int counter = 0;
+            foreach(List<Tradesman> list in tradesmen)
+            {
+                counter += list.Count;
+            }
+            return counter;
         }
     }
 }
