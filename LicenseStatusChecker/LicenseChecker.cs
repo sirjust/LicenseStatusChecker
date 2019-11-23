@@ -117,11 +117,11 @@ namespace LicenseStatusChecker
                         _logger.WriteErrorsToLog($"{ex}\n" + "There was a Selenium error.", FilePaths.exceptionLog);
                         continue;
                     }
-                    // here we document who will not receive a postcard and the reason why
-                    // i chose to do this here because i cannot return two values from the function
-                    ExcelFileWriter write = new ExcelFileWriter();
-                    write.WriteDataToFile(doNotSend, FilePaths.doNotSendPath);
                 }
+                // here we document who will not receive a postcard and the reason why
+                // i chose to do this here because i cannot return two values from the function
+                ExcelFileWriter write = new ExcelFileWriter();
+                write.WriteDataToFile(doNotSend, FilePaths.doNotSendPath);
             }
             return tradesmenToSend;
         }

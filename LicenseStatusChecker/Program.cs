@@ -14,12 +14,11 @@ namespace LicenseStatusChecker
         static void Main(string[] args)
         {
             var now = DateTime.Now;
-            List<List<Tradesman>> licenseList = new List<List<Tradesman>>();
             ExcelFileReader reader = new ExcelFileReader(new Logger());
             ExcelFileWriter writer = new ExcelFileWriter();
 
             Console.WriteLine($"The program started at {now}.");
-            licenseList = reader.ReadSpreadSheet(FilePaths.readPath);
+            var licenseList = reader.ReadSpreadSheet(FilePaths.readPath);
 
             var driver = new FirefoxDriver(FilePaths.driverLocation);
             LicenseChecker checker = new LicenseChecker(driver, now, licenseList, new Logger());

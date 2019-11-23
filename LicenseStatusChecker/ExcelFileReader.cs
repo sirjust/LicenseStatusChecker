@@ -38,6 +38,7 @@ namespace LicenseStatusChecker
 
                     var hasHeader = true;
                     var startRow = hasHeader ? 2 : 1;
+                    if (sheet.Dimension == null) continue;
                     for (var rowNum = startRow; rowNum <= sheet.Dimension.End.Row; rowNum++)
                     {
                         Tradesman tradesman = new Tradesman();
