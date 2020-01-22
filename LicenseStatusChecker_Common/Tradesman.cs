@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LicenseStatusChecker
+namespace LicenseStatusChecker_Common
 {
-    public class Tradesman
+    public class Tradesman : ITradesman
     {
         // these properties are imported from the spreadsheet
         public string LicenseType { get; set; }
@@ -25,7 +25,7 @@ namespace LicenseStatusChecker
         public double HoursCompleted { get; set; }
         public string NotSendReason { get; set; }
 
-        public int GetHoursNeeded(string trade)
+        public virtual int GetHoursNeeded(string trade)
         {
             int hoursNeeded;
             switch (trade)

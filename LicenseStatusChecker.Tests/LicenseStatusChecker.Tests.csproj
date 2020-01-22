@@ -45,6 +45,9 @@
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
   </ItemGroup>
@@ -61,6 +64,18 @@
     <ProjectReference Include="..\LicenseStatusChecker\LicenseStatusChecker.csproj">
       <Project>{61d1bbbb-957b-4253-818a-f7ac2d63bbe0}</Project>
       <Name>LicenseStatusChecker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LicenseStatusChecker_Common\LicenseStatusChecker_Common.csproj">
+      <Project>{3dabed75-14ca-478d-8d79-cd670849d5f2}</Project>
+      <Name>LicenseStatusChecker_Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LicenseStatuseChecker_Oregon\LicenseStatuseChecker_Oregon.csproj">
+      <Project>{ec83290c-efee-4b32-bd03-2dd64236a35c}</Project>
+      <Name>LicenseStatuseChecker_Oregon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LienseStatusChecker_Data\LienseStatusChecker_Data.csproj">
+      <Project>{2e7cd7f6-2c92-43ea-a845-7a9cde127610}</Project>
+      <Name>LienseStatusChecker_Data</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

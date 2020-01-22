@@ -5,12 +5,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using OfficeOpenXml;
+using LicenseStatusChecker_Common;
 
 namespace LicenseStatusChecker
 {
     class ExcelFileWriter
     {
-        public void WriteDataToFile(List<Tradesman> licenses, string path)
+        public void WriteDataToFile(List<ITradesman> licenses, string path)
         {
             var myFileInfo = new FileInfo(path);
             using (ExcelPackage package = new ExcelPackage())
@@ -27,7 +28,7 @@ namespace LicenseStatusChecker
                 worksheet.Cells["H" + cellCounter].Value = "Zip";
                 worksheet.Cells["I" + cellCounter].Value = "ExpirationDate";
                 cellCounter++;
-                foreach (Tradesman licenseHolder in licenses)
+                foreach (ITradesman licenseHolder in licenses)
                 {
                     worksheet.Cells["A" + cellCounter].Value = licenseHolder.LicenseType;
                     worksheet.Cells["B" + cellCounter].Value = licenseHolder.LicenseNumber;
