@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LienseStatusChecker_Data
 {
-    public class ExcelFileReader
+    public class ExcelFileReader : IReader
     {
         int errorCount { get; set; }
         ILogger _logger;
@@ -16,10 +16,10 @@ namespace LienseStatusChecker_Data
             _logger = logger;
             errorCount = 0;
         }
-        public List<List<Tradesman>> ReadSpreadSheet(string spreadSheetLocation)
+        public List<List<ITradesman>> ReadSpreadSheet(string spreadSheetLocation)
         {
             _logger.WriteToConsole("The program is now reading the spreadsheet.\n-----");
-            List<List<Tradesman>> ListOfTradesmen = new List<List<Tradesman>>(5);
+            List<List<ITradesman>> ListOfTradesmen = new List<List<ITradesman>>(5);
             var pck = new OfficeOpenXml.ExcelPackage();
             pck.Load(new System.IO.FileInfo(SharedFilePaths.readPath).OpenRead());
             if (pck.Workbook.Worksheets.Count != 0)
@@ -29,7 +29,7 @@ namespace LienseStatusChecker_Data
                 for (int i = 1; i <= worksheetCount; i++)
                 {
                     // the second list is not yet instantiated, here we instantiate one for each sheet
-                    ListOfTradesmen.Add(new List<Tradesman>());
+                    ListOfTradesmen.Add(new List<ITradesman>());
                     var sheet = pck.Workbook.Worksheets[i];
 
                     var hasHeader = true;
@@ -53,7 +53,7 @@ namespace LienseStatusChecker_Data
                             continue;
                         }
                         DateTime expirationDate = DateTime.Parse(tradesman.ExpirationDate);
-                        int daysTillExpiration = expirationDate.Subtract(DateTime.Today).Days;
+                        int daysTillExpiration = expirationDate.Subtract(CommonCode.Now).Days;
                         if (daysTillExpiration > 90)
                         {
                             // log that this tradesman will not have the license checked
@@ -103,10 +103,10 @@ namespace LienseStatusChecker_Data
             _logger.WriteToConsole($"The program has finished reading the spreadsheet.\nThere were {errorCount} error(s), recorded in the logs.\nIt will now check {count} license(s).\n-----");
             return ListOfTradesmen;
         }
-        private int GetTradesmanCount(List<List<Tradesman>> tradesmen)
+        public int GetTradesmanCount(List<List<ITradesman>> tradesmen)
         {
             int counter = 0;
-            foreach (List<Tradesman> list in tradesmen)
+            foreach (List<ITradesman> list in tradesmen)
             {
                 counter += list.Count;
             }

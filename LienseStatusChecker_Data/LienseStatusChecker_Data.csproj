@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ExcelFileReader.cs" />
+    <Compile Include="ExcelFileWriter.cs" />
     <Compile Include="IReader.cs" />
     <Compile Include="IWriter.cs" />
     <Compile Include="TradesmanRepository.cs" />

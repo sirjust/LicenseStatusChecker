@@ -1,4 +1,5 @@
 ﻿using LicenseStatusChecker_Common;
+using LienseStatusChecker_Data;
 using OfficeOpenXml;
 using OpenQA.Selenium.Firefox;
 using System;
@@ -21,7 +22,7 @@ namespace LicenseStatusChecker
             var licenseList = reader.ReadSpreadSheet(SharedFilePaths.readPath);
 
             var driver = new FirefoxDriver(SharedFilePaths.driverLocation);
-            LicenseChecker checker = new LicenseChecker(driver, licenseList, new Logger());
+            LicenseChecker checker = new LicenseChecker(driver, licenseList, new Logger(), writer);
             var tradesmenToSend = checker.InputLicenses();
 
             writer.WriteDataToFile(tradesmenToSend, SharedFilePaths.sendPath);

@@ -10,6 +10,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Firefox;
 using LicenseStatusChecker_Common;
+using LienseStatusChecker_Data;
 
 namespace LicenseStatusChecker
 {
@@ -19,13 +20,15 @@ namespace LicenseStatusChecker
         List<List<ITradesman>> _tradesmen;
         WebDriverWait _wait;
         ILogger _logger;
+        ExcelFileWriter _writer;
 
-        public LicenseChecker(IWebDriver driver, List<List<ITradesman>> tradesmen, ILogger logger)
+        public LicenseChecker(IWebDriver driver, List<List<ITradesman>> tradesmen, ILogger logger, ExcelFileWriter writer)
         {
             _driver = driver;
             _tradesmen = tradesmen;
             _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             _logger = logger;
+            _writer = writer;
         }
 
         public List<ITradesman> InputLicenses()
@@ -45,7 +48,7 @@ namespace LicenseStatusChecker
                         var expirationInfo = CheckExpirationDate();
                         if (expirationInfo.Item1 > 90) // if the expiration date is far in the future, the WashingtonTradesman has already renewed
                         {
-                            Console.WriteLine("{0} has likely already renewed.", WashingtonTradesman.LicenseNumber);
+                            Console.WriteLine($"{WashingtonTradesman.LicenseNumber} has likely already renewed.");
                             WashingtonTradesman.NotSendReason = "Already renewed";
                             WashingtonTradesman.ExpirationDate = expirationInfo.Item2.ToString();
                             doNotSend.Add(WashingtonTradesman);
@@ -56,7 +59,7 @@ namespace LicenseStatusChecker
                         if (status != "Active")
                         {
                             // if the license is expired or inactive, we move on
-                            Console.WriteLine("{0} is not active.", WashingtonTradesman.LicenseNumber);
+                            Console.WriteLine($"{WashingtonTradesman.LicenseNumber} is not active.");
                             WashingtonTradesman.NotSendReason = "Not active";
                             doNotSend.Add(WashingtonTradesman);
                             continue;
@@ -119,8 +122,7 @@ namespace LicenseStatusChecker
                 }
                 // here we document who will not receive a postcard and the reason why
                 // i chose to do this here because i cannot return two values from the function
-                ExcelFileWriter write = new ExcelFileWriter();
-                write.WriteDataToFile(doNotSend, SharedFilePaths.doNotSendPath);
+                _writer.WriteDataToFile(doNotSend, SharedFilePaths.doNotSendPath);
             }
             return tradesmenToSend;
         }
