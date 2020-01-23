@@ -1,12 +1,13 @@
-﻿using System;
+﻿using LicenseStatusChecker_Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LicenseStatusChecker_Common
+namespace LienseStatusChecker_Data
 {
-    class ExcelFileReader
+    public class ExcelFileReader
     {
         int errorCount { get; set; }
         ILogger _logger;

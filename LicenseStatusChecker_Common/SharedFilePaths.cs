@@ -8,10 +8,10 @@ namespace LicenseStatusChecker_Common
 {
     public static class SharedFilePaths
     {
-        private static string formattedDate = $"{DateTime.Today.Month.ToString()}-{DateTime.Today.Day.ToString()}-{DateTime.Today.Year.ToString()}";
+
         public static string readPath = $"..\\..\\..\\Files\\listToCheck.xlsx";
-        public static string sendPath = $"..\\..\\..\\Files\\Send-{formattedDate}.xlsx";
-        public static string doNotSendPath = $"..\\..\\..\\Files\\DoNotSend-{formattedDate}.xlsx";
+        public static string sendPath = $"..\\..\\..\\Files\\Send-{CommonCode.FormattedDate}.xlsx";
+        public static string doNotSendPath = $"..\\..\\..\\Files\\DoNotSend-{CommonCode.FormattedDate}.xlsx";
 
         public static string expiredLog = $"..\\..\\..\\Files\\expired.txt";
         public static string exceptionLog = $"..\\..\\..\\Files\\exception.txt";

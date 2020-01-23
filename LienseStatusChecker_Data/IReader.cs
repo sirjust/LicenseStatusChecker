@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LicenseStatusChecker_Common
+namespace LienseStatusChecker_Data
 {
-    public interface IReader
+    interface IReader
     {
     }
 }

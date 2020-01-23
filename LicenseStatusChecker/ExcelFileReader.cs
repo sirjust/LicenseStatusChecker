@@ -26,7 +26,7 @@ namespace LicenseStatusChecker
             _logger.WriteToConsole("The program is now reading the spreadsheet.\n-----");
             List<List<ITradesman>> ListOfTradesmen = new List<List<ITradesman>>(5);
             var pck = new OfficeOpenXml.ExcelPackage();
-            pck.Load(new System.IO.FileInfo(FilePaths.readPath).OpenRead());
+            pck.Load(new System.IO.FileInfo(SharedFilePaths.readPath).OpenRead());
             if (pck.Workbook.Worksheets.Count != 0)
             {
                 int worksheetCount = pck.Workbook.Worksheets.Count;
@@ -53,7 +53,7 @@ namespace LicenseStatusChecker
                         catch (NullReferenceException ex)
                         {
                             string message = $"{ex}\n" + "This tradesman has either no license number or no expiration date.";
-                            _logger.WriteErrorsToLog(message, FilePaths.exceptionLog);
+                            _logger.WriteErrorsToLog(message, SharedFilePaths.exceptionLog);
                             errorCount++;
                             continue;
                         }
@@ -63,7 +63,7 @@ namespace LicenseStatusChecker
                         {
                             // log that this tradesman will not have the license checked
                             var message = $"{tradesman.LicenseNumber}'s expiration date is greater than 90.";
-                            _logger.WriteErrorsToLog(message, FilePaths.greaterThan90Log);
+                            _logger.WriteErrorsToLog(message, SharedFilePaths.greaterThan90Log);
                             errorCount++;
                             continue;
                         }
@@ -71,7 +71,7 @@ namespace LicenseStatusChecker
                         {
                             // log that this tradesman will not have the license checked
                             var message = $"{tradesman.LicenseNumber}'s expiration date is in the past.";
-                            _logger.WriteErrorsToLog(message, FilePaths.expiredLog);
+                            _logger.WriteErrorsToLog(message, SharedFilePaths.expiredLog);
                             errorCount++;
                             continue;
                         }
@@ -97,7 +97,7 @@ namespace LicenseStatusChecker
                         catch (NullReferenceException ex)
                         {
                             var message = $"{ex}\n" + $"{tradesman.LicenseNumber}'s record has null or incorrect values.";
-                            _logger.WriteErrorsToLog(message, FilePaths.exceptionLog);
+                            _logger.WriteErrorsToLog(message, SharedFilePaths.exceptionLog);
                             errorCount++;
                             continue;
                         }

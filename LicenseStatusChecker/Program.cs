@@ -1,4 +1,5 @@
-﻿using OfficeOpenXml;
+﻿using LicenseStatusChecker_Common;
+using OfficeOpenXml;
 using OpenQA.Selenium.Firefox;
 using System;
 using System.Collections.Generic;
@@ -13,21 +14,20 @@ namespace LicenseStatusChecker
     {
         static void Main(string[] args)
         {
-            var now = DateTime.Now;
             ExcelFileReader reader = new ExcelFileReader(new Logger());
             ExcelFileWriter writer = new ExcelFileWriter();
 
-            Console.WriteLine($"The program started at {now}.");
-            var licenseList = reader.ReadSpreadSheet(FilePaths.readPath);
+            Console.WriteLine($"The program started at {CommonCode.Now}.");
+            var licenseList = reader.ReadSpreadSheet(SharedFilePaths.readPath);
 
-            var driver = new FirefoxDriver(FilePaths.driverLocation);
-            LicenseChecker checker = new LicenseChecker(driver, now, licenseList, new Logger());
+            var driver = new FirefoxDriver(SharedFilePaths.driverLocation);
+            LicenseChecker checker = new LicenseChecker(driver, licenseList, new Logger());
             var tradesmenToSend = checker.InputLicenses();
 
-            writer.WriteDataToFile(tradesmenToSend, FilePaths.sendPath);
+            writer.WriteDataToFile(tradesmenToSend, SharedFilePaths.sendPath);
 
             Console.WriteLine("The check has been completed.");
-            Console.WriteLine($"The program successfully completed at {DateTime.Now}.");
+            Console.WriteLine($"The program successfully completed at {CommonCode.Now}.");
             Console.Read();
         }
     }

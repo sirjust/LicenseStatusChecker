@@ -16,15 +16,13 @@ namespace LicenseStatusChecker
     public class LicenseChecker
     {
         IWebDriver _driver;
-        DateTime _todaysDate = DateTime.Today;
         List<List<ITradesman>> _tradesmen;
         WebDriverWait _wait;
         ILogger _logger;
 
-        public LicenseChecker(IWebDriver driver, DateTime today, List<List<ITradesman>> tradesmen, ILogger logger)
+        public LicenseChecker(IWebDriver driver, List<List<ITradesman>> tradesmen, ILogger logger)
         {
             _driver = driver;
-            _todaysDate = today;
             _tradesmen = tradesmen;
             _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             _logger = logger;
@@ -115,14 +113,14 @@ namespace LicenseStatusChecker
                     catch (Exception ex)
                     {
                         Console.WriteLine("There was a {0} with {1}.", ex.Message, WashingtonTradesman.LicenseNumber);
-                        _logger.WriteErrorsToLog($"{ex}\n" + "There was a Selenium error.", FilePaths.exceptionLog);
+                        _logger.WriteErrorsToLog($"{ex}\n" + "There was a Selenium error.", SharedFilePaths.exceptionLog);
                         continue;
                     }
                 }
                 // here we document who will not receive a postcard and the reason why
                 // i chose to do this here because i cannot return two values from the function
                 ExcelFileWriter write = new ExcelFileWriter();
-                write.WriteDataToFile(doNotSend, FilePaths.doNotSendPath);
+                write.WriteDataToFile(doNotSend, SharedFilePaths.doNotSendPath);
             }
             return tradesmenToSend;
         }
@@ -148,7 +146,7 @@ namespace LicenseStatusChecker
             // this delay is here because there was an exception while parsing on the next line if it ran too quickly
             Task.Delay(1000).Wait();
             var expirationDate = DateTime.Parse(expirationDateElement.GetAttribute("innerHTML"));
-            int daysTillExpiration = expirationDate.Subtract(_todaysDate).Days;
+            int daysTillExpiration = expirationDate.Subtract(CommonCode.Now).Days;
             var returnInfo = (daysTillExpiration, expirationDate);
             return returnInfo;
         }
