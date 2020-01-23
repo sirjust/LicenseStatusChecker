@@ -9,47 +9,49 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Firefox;
+using LicenseStatusChecker_Common;
+using LienseStatusChecker_Data;
 
 namespace LicenseStatusChecker
 {
     public class LicenseChecker
     {
         IWebDriver _driver;
-        DateTime _todaysDate = DateTime.Today;
-        List<List<Tradesman>> _tradesmen;
+        List<List<ITradesman>> _tradesmen;
         WebDriverWait _wait;
         ILogger _logger;
+        ExcelFileWriter _writer;
 
-        public LicenseChecker(IWebDriver driver, DateTime today, List<List<Tradesman>> tradesmen, ILogger logger)
+        public LicenseChecker(IWebDriver driver, List<List<ITradesman>> tradesmen, ILogger logger, ExcelFileWriter writer)
         {
             _driver = driver;
-            _todaysDate = today;
             _tradesmen = tradesmen;
             _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             _logger = logger;
+            _writer = writer;
         }
 
-        public List<Tradesman> InputLicenses()
+        public List<ITradesman> InputLicenses()
         {
             // Console.WriteLine(thisPath);
-            List<Tradesman> tradesmenToSend = new List<Tradesman>();
-            List<Tradesman> doNotSend = new List<Tradesman>();
+            List<ITradesman> tradesmenToSend = new List<ITradesman>();
+            List<ITradesman> doNotSend = new List<ITradesman>();
 
-            foreach (List<Tradesman> tradeList in _tradesmen)
+            foreach (List<ITradesman> tradeList in _tradesmen)
             {
-                foreach (Tradesman tradesman in tradeList)
+                foreach (ITradesman WashingtonTradesman in tradeList)
                 {
                     try
                     {
-                        _driver.Url = $"https://secure.lni.wa.gov/verify/Detail.aspx?UBI=&LIC={tradesman.LicenseNumber}&SAW=";
+                        _driver.Url = $"https://secure.lni.wa.gov/verify/Detail.aspx?UBI=&LIC={WashingtonTradesman.LicenseNumber}&SAW=";
 
                         var expirationInfo = CheckExpirationDate();
-                        if (expirationInfo.Item1 > 90) // if the expiration date is far in the future, the tradesman has already renewed
+                        if (expirationInfo.Item1 > 90) // if the expiration date is far in the future, the WashingtonTradesman has already renewed
                         {
-                            Console.WriteLine("{0} has likely already renewed.", tradesman.LicenseNumber);
-                            tradesman.NotSendReason = "Already renewed";
-                            tradesman.ExpirationDate = expirationInfo.Item2.ToString();
-                            doNotSend.Add(tradesman);
+                            Console.WriteLine($"{WashingtonTradesman.LicenseNumber} has likely already renewed.");
+                            WashingtonTradesman.NotSendReason = "Already renewed";
+                            WashingtonTradesman.ExpirationDate = expirationInfo.Item2.ToString();
+                            doNotSend.Add(WashingtonTradesman);
                             continue;
                         }
 
@@ -57,15 +59,15 @@ namespace LicenseStatusChecker
                         if (status != "Active")
                         {
                             // if the license is expired or inactive, we move on
-                            Console.WriteLine("{0} is not active.", tradesman.LicenseNumber);
-                            tradesman.NotSendReason = "Not active";
-                            doNotSend.Add(tradesman);
+                            Console.WriteLine($"{WashingtonTradesman.LicenseNumber} is not active.");
+                            WashingtonTradesman.NotSendReason = "Not active";
+                            doNotSend.Add(WashingtonTradesman);
                             continue;
                         }
 
-                        SetTradeAndHours(tradesman);
+                        SetTradeAndHours(WashingtonTradesman);
 
-                        // now that all our properties are populated, we need to check them against the credits the tradesman has already completed
+                        // now that all our properties are populated, we need to check them against the credits the WashingtonTradesman has already completed
                         bool hasCourses;
                         try
                         {
@@ -98,40 +100,39 @@ namespace LicenseStatusChecker
                             coursesTaken.Add(data);
                             numberOfCredits += Convert.ToDouble(data);
                         }
-                        tradesman.HoursCompleted = numberOfCredits;
-                        Console.Write("{0} has completed {1} credits and needs {2}", tradesman.LicenseNumber, tradesman.HoursCompleted, tradesman.HoursNeeded);
-                        if (tradesman.HoursNeeded <= numberOfCredits)
+                        WashingtonTradesman.HoursCompleted = numberOfCredits;
+                        Console.Write("{0} has completed {1} credits and needs {2}", WashingtonTradesman.LicenseNumber, WashingtonTradesman.HoursCompleted, WashingtonTradesman.HoursNeeded);
+                        if (WashingtonTradesman.HoursNeeded <= numberOfCredits)
                         {
                             // if they have enough credits
-                            Console.WriteLine(" | {0} has enough credits.", tradesman.LicenseNumber);
-                            tradesman.NotSendReason = "CEUs completed";
-                            doNotSend.Add(tradesman);
+                            Console.WriteLine(" | {0} has enough credits.", WashingtonTradesman.LicenseNumber);
+                            WashingtonTradesman.NotSendReason = "CEUs completed";
+                            doNotSend.Add(WashingtonTradesman);
                             continue;
                         }
                         Console.Write("\n");
-                        tradesmenToSend.Add(tradesman);
+                        tradesmenToSend.Add(WashingtonTradesman);
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine("There was a {0} with {1}.", ex.Message, tradesman.LicenseNumber);
-                        _logger.WriteErrorsToLog($"{ex}\n" + "There was a Selenium error.", FilePaths.exceptionLog);
+                        Console.WriteLine("There was a {0} with {1}.", ex.Message, WashingtonTradesman.LicenseNumber);
+                        _logger.WriteErrorsToLog($"{ex}\n" + "There was a Selenium error.", SharedFilePaths.exceptionLog);
                         continue;
                     }
                 }
                 // here we document who will not receive a postcard and the reason why
                 // i chose to do this here because i cannot return two values from the function
-                ExcelFileWriter write = new ExcelFileWriter();
-                write.WriteDataToFile(doNotSend, FilePaths.doNotSendPath);
+                _writer.WriteDataToFile(doNotSend, SharedFilePaths.doNotSendPath);
             }
             return tradesmenToSend;
         }
 
-        private void SetTradeAndHours(Tradesman tradesman)
+        private void SetTradeAndHours(ITradesman WashingtonTradesman)
         {
             // we need to check the trade and rank of the license holder
             IWebElement licenseTypeElement = _wait.Until(d => d.FindElement(By.Id("LicenseType")));
-            tradesman.Trade = licenseTypeElement.GetAttribute("innerHTML");
-            tradesman.HoursNeeded = tradesman.GetHoursNeeded(tradesman.Trade);
+            WashingtonTradesman.Trade = licenseTypeElement.GetAttribute("innerHTML");
+            WashingtonTradesman.HoursNeeded = WashingtonTradesman.GetHoursNeeded(WashingtonTradesman.Trade);
         }
 
         private string GetLicenseStatus()
@@ -147,7 +148,7 @@ namespace LicenseStatusChecker
             // this delay is here because there was an exception while parsing on the next line if it ran too quickly
             Task.Delay(1000).Wait();
             var expirationDate = DateTime.Parse(expirationDateElement.GetAttribute("innerHTML"));
-            int daysTillExpiration = expirationDate.Subtract(_todaysDate).Days;
+            int daysTillExpiration = expirationDate.Subtract(CommonCode.Now).Days;
             var returnInfo = (daysTillExpiration, expirationDate);
             return returnInfo;
         }

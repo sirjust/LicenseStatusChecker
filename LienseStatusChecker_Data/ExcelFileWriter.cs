@@ -1,16 +1,17 @@
-﻿using System;
-using System.IO;
+﻿using LicenseStatusChecker_Common;
+using OfficeOpenXml;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using OfficeOpenXml;
 
-namespace LicenseStatusChecker
+namespace LienseStatusChecker_Data
 {
-    class ExcelFileWriter
+    public class ExcelFileWriter : IWriter
     {
-        public void WriteDataToFile(List<Tradesman> licenses, string path)
+        public void WriteDataToFile(List<ITradesman> licenses, string path)
         {
             var myFileInfo = new FileInfo(path);
             using (ExcelPackage package = new ExcelPackage())
@@ -27,7 +28,7 @@ namespace LicenseStatusChecker
                 worksheet.Cells["H" + cellCounter].Value = "Zip";
                 worksheet.Cells["I" + cellCounter].Value = "ExpirationDate";
                 cellCounter++;
-                foreach (Tradesman licenseHolder in licenses)
+                foreach (ITradesman licenseHolder in licenses)
                 {
                     worksheet.Cells["A" + cellCounter].Value = licenseHolder.LicenseType;
                     worksheet.Cells["B" + cellCounter].Value = licenseHolder.LicenseNumber;

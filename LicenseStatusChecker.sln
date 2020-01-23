@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseStatusChecker", "Lic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseStatusChecker.Tests", "LicenseStatusChecker.Tests\LicenseStatusChecker.Tests.csproj", "{757BADC3-DA69-4226-AF23-5D9CA817697D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseStatusChecker_Common", "LicenseStatusChecker_Common\LicenseStatusChecker_Common.csproj", "{3DABED75-14CA-478D-8D79-CD670849D5F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LicenseStatuseChecker_Oregon", "LicenseStatuseChecker_Oregon\LicenseStatuseChecker_Oregon.csproj", "{EC83290C-EFEE-4B32-BD03-2DD64236A35C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LienseStatusChecker_Data", "LienseStatusChecker_Data\LienseStatusChecker_Data.csproj", "{2E7CD7F6-2C92-43EA-A845-7A9CDE127610}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +27,18 @@ Global
 		{757BADC3-DA69-4226-AF23-5D9CA817697D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{757BADC3-DA69-4226-AF23-5D9CA817697D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{757BADC3-DA69-4226-AF23-5D9CA817697D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DABED75-14CA-478D-8D79-CD670849D5F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DABED75-14CA-478D-8D79-CD670849D5F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DABED75-14CA-478D-8D79-CD670849D5F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DABED75-14CA-478D-8D79-CD670849D5F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC83290C-EFEE-4B32-BD03-2DD64236A35C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC83290C-EFEE-4B32-BD03-2DD64236A35C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC83290C-EFEE-4B32-BD03-2DD64236A35C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC83290C-EFEE-4B32-BD03-2DD64236A35C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E7CD7F6-2C92-43EA-A845-7A9CDE127610}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E7CD7F6-2C92-43EA-A845-7A9CDE127610}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E7CD7F6-2C92-43EA-A845-7A9CDE127610}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E7CD7F6-2C92-43EA-A845-7A9CDE127610}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,17 +1,13 @@
-﻿using System;
-using System.IO;
-using System.Collections;
+﻿using LicenseStatusChecker_Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using AODL;
-using AODL.Document.SpreadsheetDocuments;
 
-namespace LicenseStatusChecker
+namespace LienseStatusChecker_Data
 {
-    public class ExcelFileReader
+    public class ExcelFileReader : IReader
     {
         int errorCount { get; set; }
         ILogger _logger;
@@ -20,20 +16,20 @@ namespace LicenseStatusChecker
             _logger = logger;
             errorCount = 0;
         }
-        public List<List<Tradesman>> ReadSpreadSheet(string spreadSheetLocation)
+        public List<List<ITradesman>> ReadSpreadSheet(string spreadSheetLocation)
         {
             _logger.WriteToConsole("The program is now reading the spreadsheet.\n-----");
-            List<List<Tradesman>> ListOfTradesmen = new List<List<Tradesman>>(5);
+            List<List<ITradesman>> ListOfTradesmen = new List<List<ITradesman>>(5);
             var pck = new OfficeOpenXml.ExcelPackage();
-            pck.Load(new System.IO.FileInfo(FilePaths.readPath).OpenRead());
+            pck.Load(new System.IO.FileInfo(SharedFilePaths.readPath).OpenRead());
             if (pck.Workbook.Worksheets.Count != 0)
             {
                 int worksheetCount = pck.Workbook.Worksheets.Count;
                 // The OpenXML library is 1-based in this environment
-                for(int i= 1; i<= worksheetCount; i++)
+                for (int i = 1; i <= worksheetCount; i++)
                 {
                     // the second list is not yet instantiated, here we instantiate one for each sheet
-                    ListOfTradesmen.Add(new List<Tradesman>());
+                    ListOfTradesmen.Add(new List<ITradesman>());
                     var sheet = pck.Workbook.Worksheets[i];
 
                     var hasHeader = true;
@@ -52,17 +48,17 @@ namespace LicenseStatusChecker
                         catch (NullReferenceException ex)
                         {
                             string message = $"{ex}\n" + "This tradesman has either no license number or no expiration date.";
-                            _logger.WriteErrorsToLog(message, FilePaths.exceptionLog);
+                            _logger.WriteErrorsToLog(message, SharedFilePaths.exceptionLog);
                             errorCount++;
                             continue;
                         }
                         DateTime expirationDate = DateTime.Parse(tradesman.ExpirationDate);
-                        int daysTillExpiration = expirationDate.Subtract(DateTime.Today).Days;
+                        int daysTillExpiration = expirationDate.Subtract(CommonCode.Now).Days;
                         if (daysTillExpiration > 90)
                         {
                             // log that this tradesman will not have the license checked
                             var message = $"{tradesman.LicenseNumber}'s expiration date is greater than 90.";
-                            _logger.WriteErrorsToLog(message, FilePaths.greaterThan90Log);
+                            _logger.WriteErrorsToLog(message, SharedFilePaths.greaterThan90Log);
                             errorCount++;
                             continue;
                         }
@@ -70,7 +66,7 @@ namespace LicenseStatusChecker
                         {
                             // log that this tradesman will not have the license checked
                             var message = $"{tradesman.LicenseNumber}'s expiration date is in the past.";
-                            _logger.WriteErrorsToLog(message, FilePaths.expiredLog);
+                            _logger.WriteErrorsToLog(message, SharedFilePaths.expiredLog);
                             errorCount++;
                             continue;
                         }
@@ -91,12 +87,12 @@ namespace LicenseStatusChecker
 
                             tradesman.Zip = ((object[,])rawData)[0, 7].ToString();
 
-                            ListOfTradesmen[i-1].Add(tradesman);
+                            ListOfTradesmen[i - 1].Add(tradesman);
                         }
                         catch (NullReferenceException ex)
                         {
                             var message = $"{ex}\n" + $"{tradesman.LicenseNumber}'s record has null or incorrect values.";
-                            _logger.WriteErrorsToLog(message, FilePaths.exceptionLog);
+                            _logger.WriteErrorsToLog(message, SharedFilePaths.exceptionLog);
                             errorCount++;
                             continue;
                         }
@@ -107,10 +103,10 @@ namespace LicenseStatusChecker
             _logger.WriteToConsole($"The program has finished reading the spreadsheet.\nThere were {errorCount} error(s), recorded in the logs.\nIt will now check {count} license(s).\n-----");
             return ListOfTradesmen;
         }
-        private int GetTradesmanCount(List<List<Tradesman>> tradesmen)
+        public int GetTradesmanCount(List<List<ITradesman>> tradesmen)
         {
             int counter = 0;
-            foreach(List<Tradesman> list in tradesmen)
+            foreach (List<ITradesman> list in tradesmen)
             {
                 counter += list.Count;
             }

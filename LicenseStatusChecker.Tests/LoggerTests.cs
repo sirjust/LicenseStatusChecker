@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using LicenseStatusChecker_Common;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,9 +12,9 @@ namespace LicenseStatusChecker.Tests
     public class LoggerTests
     {
         [TestMethod]
+        [Ignore] // This is a manual test
         public void WriteToConsole_ShouldWriteMessageToConsole()
         {
-            // This is a manual test
             // Arrange
             var logger = new Logger();
             var message = "This is a test.";

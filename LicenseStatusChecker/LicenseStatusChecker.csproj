@@ -38,11 +38,14 @@
     <Reference Include="AODL, Version=1.2.0.1, Culture=neutral">
       <HintPath>..\packages\AODL.1.2.0.1\lib\AODL.dll</HintPath>
     </Reference>
-    <Reference Include="EPPlus, Version=4.5.3.1, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
-      <HintPath>..\packages\EPPlus.4.5.3.1\lib\net40\EPPlus.dll</HintPath>
+    <Reference Include="EPPlus, Version=4.5.3.2, Culture=neutral, PublicKeyToken=ea159fdaa78159a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\EPPlus.4.5.3.2\lib\net40\EPPlus.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.SharpZipLib, Version=0.84.0.0, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
       <HintPath>..\packages\AODL.1.2.0.1\lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.3.4.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.3.4\lib\net45\Ninject.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="System" />
@@ -67,19 +70,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ILogger.cs" />
     <Compile Include="LicenseChecker.cs" />
-    <Compile Include="FilePaths.cs" />
-    <Compile Include="Logger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ExcelFileReader.cs" />
-    <Compile Include="Tradesman.cs" />
-    <Compile Include="ExcelFileWriter.cs" />
+    <Compile Include="WashingtonTradesman.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LicenseStatusChecker_Common\LicenseStatusChecker_Common.csproj">
+      <Project>{3dabed75-14ca-478d-8d79-cd670849d5f2}</Project>
+      <Name>LicenseStatusChecker_Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LienseStatusChecker_Data\LienseStatusChecker_Data.csproj">
+      <Project>{2e7cd7f6-2c92-43ea-a845-7a9cde127610}</Project>
+      <Name>LienseStatusChecker_Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
