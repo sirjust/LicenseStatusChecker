@@ -15,21 +15,20 @@ namespace LicenseStatusChecker
     {
         static void Main(string[] args)
         {
-            ExcelFileReader reader = new ExcelFileReader(new Logger());
+            Logger logger = new Logger();
+            ExcelFileReader reader = new ExcelFileReader(logger);
             ExcelFileWriter writer = new ExcelFileWriter();
 
-            Console.WriteLine($"The program started at {CommonCode.Now}.");
+            logger.LogStart();
             var licenseList = reader.ReadSpreadSheet(SharedFilePaths.readPath);
 
             var driver = new FirefoxDriver(SharedFilePaths.driverLocation);
-            LicenseChecker checker = new LicenseChecker(driver, licenseList, new Logger(), writer);
+            LicenseChecker checker = new LicenseChecker(driver, licenseList, logger, writer);
             var tradesmenToSend = checker.InputLicenses();
 
             writer.WriteDataToFile(tradesmenToSend, SharedFilePaths.sendPath);
 
-            Console.WriteLine("The check has been completed.");
-            Console.WriteLine($"The program successfully completed at {CommonCode.Now}.");
-            Console.Read();
+            logger.LogEnd();
         }
     }
 }
