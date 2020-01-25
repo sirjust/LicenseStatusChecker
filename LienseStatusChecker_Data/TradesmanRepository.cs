@@ -10,20 +10,36 @@ namespace LienseStatusChecker_Data
     public class TradesmanRepository
     {
         List<ITradesman> Tradesmen;
+        IReader _reader;
+        IWriter _writer;
 
-        public void WriteDataToFile(List<ITradesman> licenses, string path)
+        TradesmanRepository(IReader reader, IWriter writer)
         {
-            // TODO call appropriate writer
+            _reader = reader;
+            _writer = writer;
         }
 
-        public List<List<ITradesman>> ReadSpreadsheet(string location)
+        public bool WriteDataToFile(List<ITradesman> licenses, string path)
         {
-            throw new NotImplementedException();
+            try
+            {
+                _writer.WriteDataToFile(licenses, path);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
         }
 
-        private int GetTradesmanCount(List<List<ITradesman>> tradesmen)
+        public List<List<ITradesman>> ReadSpreadsheet(string location, string state)
         {
-            throw new NotImplementedException();
+            return _reader.ReadSpreadSheet(location, state);
+        }
+
+        public int GetTradesmanCount(List<List<ITradesman>> tradesmen)
+        {
+            return _reader.GetTradesmanCount(tradesmen);
         }
     }
 }

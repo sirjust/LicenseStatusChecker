@@ -9,7 +9,7 @@ namespace LienseStatusChecker_Data
 {
     public interface IReader
     {
-        List<List<ITradesman>> ReadSpreadSheet(string spreadSheetLocation);
+        List<List<ITradesman>> ReadSpreadSheet(string spreadSheetLocation, string state);
 
         int GetTradesmanCount(List<List<ITradesman>> tradesmen);
     }
