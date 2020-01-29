@@ -1,4 +1,5 @@
 ﻿using LicenseStatusChecker_Common;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,13 +40,55 @@ namespace LienseStatusChecker_Data
                     {
                         ReadWashingtonSheet(listOfTradesmen, sheet, startRow, i);
                     }
-                    
+                    else
+                    {
+                        ReadOregonSheet(listOfTradesmen, sheet, startRow, i);
+                    }
                 }
             }
             int count = GetTradesmanCount(listOfTradesmen);
             _logger.WriteToConsole($"The program has finished reading the spreadsheet.\nThere were {errorCount} error(s), recorded in the logs.\nIt will now check {count} license(s).\n-----");
             return listOfTradesmen;
         }
+
+        private void ReadOregonSheet(List<List<ITradesman>> listOfTradesmen, ExcelWorksheet sheet, int startRow, int i)
+        {
+            for(var rowNum = startRow; rowNum <= sheet.Dimension.End.Row; rowNum++)
+            {
+                Tradesman tradesman = new Tradesman();
+                var wsRow = sheet.Cells[rowNum, 1, rowNum, sheet.Dimension.End.Column];
+                var rawData = wsRow.Value;
+                try
+                {
+                    tradesman.LicenseNumber = ((object[,])rawData)[0,0].ToString();
+                }
+                catch (NullReferenceException ex)
+                {
+                    string message = $"{ex}\n" + "This tradesman has no license number.";
+                    _logger.WriteErrorsToLog(message, SharedFilePaths.exceptionLog);
+                    errorCount++;
+                    continue;
+                }
+                tradesman.LicenseType = ((object[,])rawData)[0, 1].ToString();
+                var firstName = ((object[,])rawData)[0, 2].ToString();
+                var lastName = ((object[,])rawData)[0, 3].ToString();
+                tradesman.Name = $"{firstName} {lastName}";
+                if (((object[,])rawData)[0, 4] != null)
+                {
+                    tradesman.Address1 = ((object[,])rawData)[0, 4].ToString();
+                }
+                tradesman.City = ((object[,])rawData)[0, 5].ToString();
+                if (((object[,])rawData)[0, 6] != null)
+                {
+                    tradesman.State = ((object[,])rawData)[0, 6].ToString();
+                }
+
+                tradesman.Zip = ((object[,])rawData)[0, 7].ToString();
+
+                listOfTradesmen[i - 1].Add(tradesman);
+            }
+        }
+
         public int GetTradesmanCount(List<List<ITradesman>> tradesmen)
         {
             int counter = 0;

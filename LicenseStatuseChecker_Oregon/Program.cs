@@ -21,8 +21,8 @@ namespace LicenseStatuseChecker_Oregon
             var licenseList = reader.ReadSpreadSheet(SharedFilePaths.readPath, "OR");
 
             var driver = new FirefoxDriver(SharedFilePaths.driverLocation);
-            // LicenseChecker checker = new LicenseChecker(driver, licenseList, logger, writer);
-            // var tradesmenToSend = checker.InputLicenses();
+            LicenseChecker checker = new LicenseChecker(driver, licenseList, logger, writer);
+            var tradesmenToSend = checker.InputLicenses();
 
             // writer.WriteDataToFile(tradesmenToSend, SharedFilePaths.sendPath);
 
