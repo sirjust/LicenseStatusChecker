@@ -20,7 +20,7 @@ namespace LicenseStatusChecker
             ExcelFileWriter writer = new ExcelFileWriter();
 
             logger.LogStart();
-            var licenseList = reader.ReadSpreadSheet(SharedFilePaths.readPath);
+            var licenseList = reader.ReadSpreadSheet(SharedFilePaths.readPath, "WA");
 
             var driver = new FirefoxDriver(SharedFilePaths.driverLocation);
             LicenseChecker checker = new LicenseChecker(driver, licenseList, logger, writer);
