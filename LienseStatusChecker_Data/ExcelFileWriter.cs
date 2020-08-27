@@ -3,9 +3,6 @@ using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LienseStatusChecker_Data
 {
@@ -53,6 +50,33 @@ namespace LienseStatusChecker_Data
                 {
                     Console.WriteLine("==================\n\nThe destination file appears to be open in another program. Please close it and run again.\n===============\n{0}", exception.ToString());
                 }
+
+            }
+        }
+
+        public void WriteSingleTradesmanToFile(ITradesman tradesman, string path)
+        {
+            try
+            {
+                var myFileInfo = new FileInfo(path);
+                using (ExcelPackage package = new ExcelPackage())
+                {
+                    var worksheet = package.Workbook.Worksheets.Add("mySheet");
+                    int cellCounter = 1;
+                    worksheet.Cells["A" + cellCounter].Value = "License Type";
+                    worksheet.Cells["B" + cellCounter].Value = "License Number";
+                    worksheet.Cells["C" + cellCounter].Value = "Name";
+                    worksheet.Cells["D" + cellCounter].Value = "Address1";
+                    worksheet.Cells["E" + cellCounter].Value = "Address2";
+                    worksheet.Cells["F" + cellCounter].Value = "City";
+                    worksheet.Cells["G" + cellCounter].Value = "State";
+                    worksheet.Cells["H" + cellCounter].Value = "Zip";
+                    worksheet.Cells["I" + cellCounter].Value = "ExpirationDate";
+                    cellCounter++;
+                }
+            }
+            catch
+            {
 
             }
         }
