@@ -8,29 +8,27 @@ using System.Threading.Tasks;
 
 namespace LicenseStatusChecker
 {
-    public class LicenseChecker
+    public class LicenseChecker : ILicenseChecker
     {
         IWebDriver _driver;
-        List<List<ITradesman>> _tradesmen;
         WebDriverWait _wait;
         ILogger _logger;
-        ExcelFileWriter _writer;
+        IWriter _writer;
 
-        public LicenseChecker(IWebDriver driver, List<List<ITradesman>> tradesmen, ILogger logger, ExcelFileWriter writer)
+        public LicenseChecker(IWebDriver driver, ILogger logger, IWriter writer)
         {
             _driver = driver;
-            _tradesmen = tradesmen;
             _wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             _logger = logger;
             _writer = writer;
         }
 
-        public List<ITradesman> InputLicenses()
+        public void InputLicenses(List<List<ITradesman>> tradesmen)
         {
-            List<ITradesman> tradesmenToSend = new List<ITradesman>();
-            List<ITradesman> doNotSend = new List<ITradesman>();
+            var tradesmenToSend = new List<ITradesman>();
+            var doNotSend = new List<ITradesman>();
 
-            foreach (List<ITradesman> tradeList in _tradesmen)
+            foreach (List<ITradesman> tradeList in tradesmen)
             {
                 foreach (ITradesman washingtonTradesman in tradeList)
                 {
@@ -90,6 +88,12 @@ namespace LicenseStatusChecker
                             AddTradesmanToDoNotSendList(doNotSend, washingtonTradesman, reason);
                             continue;
                         }
+                        if (numberOfCredits > 0)
+                        {
+                            var reason = $" | {washingtonTradesman.LicenseNumber} has some credits already.";
+                            AddTradesmanToDoNotSendList(doNotSend, washingtonTradesman, reason);
+                            continue;
+                        }
                         tradesmenToSend.Add(washingtonTradesman);
                     }
                     catch (Exception ex)
@@ -99,17 +103,15 @@ namespace LicenseStatusChecker
                         continue;
                     }
                 }
-                // here we document who will not receive a postcard and the reason why
-                // i chose to do this here because i cannot return two values from the function
                 _writer.WriteDataToFile(doNotSend, SharedFilePaths.doNotSendPath);
             }
-            return tradesmenToSend;
+            _writer.WriteDataToFile(tradesmenToSend, SharedFilePaths.sendPath);
         }
 
         public void AddTradesmanToDoNotSendList(List<ITradesman> list, ITradesman tradesman, string reason)
         {
             Console.WriteLine(reason);
-            tradesman.NotSendReason = "CEUs completed";
+            tradesman.NotSendReason = reason;
             list.Add(tradesman);
         }
 
@@ -147,9 +149,12 @@ namespace LicenseStatusChecker
             // this delay is here because there was an exception while parsing on the next line if it ran too quickly
             Task.Delay(500).Wait();
             var expirationDate = DateTime.Parse(expirationDateElement.GetAttribute("innerHTML"));
-            int daysTillExpiration = expirationDate.Subtract(CommonCode.Now).Days;
-            var returnInfo = (daysTillExpiration, expirationDate);
-            return returnInfo;
+            return (expirationDate.Subtract(CommonCode.Now).Days, expirationDate);
+        }
+
+        public void WriteExcelDocument(IEnumerable<Tradesman> tradesmen, string path)
+        {
+            _writer.WriteDataToFile(tradesmen, path);
         }
     }
 }

@@ -8,7 +8,7 @@ namespace LienseStatusChecker_Data
 {
     public class ExcelFileWriter : IWriter
     {
-        public void WriteDataToFile(List<ITradesman> licenses, string path)
+        public void WriteDataToFile(IEnumerable<ITradesman> licenses, string path)
         {
             var myFileInfo = new FileInfo(path);
             using (ExcelPackage package = new ExcelPackage())

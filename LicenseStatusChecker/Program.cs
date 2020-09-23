@@ -1,27 +1,19 @@
-﻿using LicenseStatusChecker_Common;
+﻿using LicenseStatusChecker.Dependency;
+using LicenseStatusChecker_Common;
 using LienseStatusChecker_Data;
-using OpenQA.Selenium.Firefox;
+using Ninject;
 
 namespace LicenseStatusChecker
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            Logger logger = new Logger();
-            ExcelFileReader reader = new ExcelFileReader(logger);
-            ExcelFileWriter writer = new ExcelFileWriter();
+            var kernel = new StandardKernel(new DependencyContainer());
 
-            logger.LogStart();
-            var licenseList = reader.ReadSpreadSheet(SharedFilePaths.readPath, "WA");
-
-            var driver = new FirefoxDriver(SharedFilePaths.driverLocation);
-            LicenseChecker checker = new LicenseChecker(driver, licenseList, logger, writer);
-            var tradesmenToSend = checker.InputLicenses();
-
-            writer.WriteDataToFile(tradesmenToSend, SharedFilePaths.sendPath);
-
-            logger.LogEnd();
+            kernel.Get<ILogger>().LogStart();
+            kernel.Get<ILicenseChecker>().InputLicenses(kernel.Get<IReader>().ReadSpreadSheet(SharedFilePaths.readPath, "WA"));
+            kernel.Get<ILogger>().LogEnd();
         }
     }
 }
