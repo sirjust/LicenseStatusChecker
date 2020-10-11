@@ -10,7 +10,7 @@ namespace LicenseStatusChecker
         bool CheckCourses();
         (int, DateTime) CheckExpirationDate();
         string GetLicenseStatus();
-        void InputLicenses(List<List<ITradesman>> tradesmen);
+        void CheckLicenses(List<List<ITradesman>> tradesmen);
         void SetTradeAndHours(ITradesman WashingtonTradesman);
     }
 }

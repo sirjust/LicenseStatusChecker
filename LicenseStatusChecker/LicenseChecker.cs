@@ -23,7 +23,7 @@ namespace LicenseStatusChecker
             _writer = writer;
         }
 
-        public void InputLicenses(List<List<ITradesman>> tradesmen)
+        public void CheckLicenses(List<List<ITradesman>> tradesmen)
         {
             var tradesmenToSend = new List<ITradesman>();
             var doNotSend = new List<ITradesman>();
@@ -41,6 +41,7 @@ namespace LicenseStatusChecker
                             washingtonTradesman.ExpirationDate = CheckExpirationDate().Item2.ToString();
                             var reason = $"{washingtonTradesman.LicenseNumber} has likely already renewed.";
                             AddTradesmanToDoNotSendList(doNotSend, washingtonTradesman, reason);
+                            _writer.WriteSingleTradesmanToFile(washingtonTradesman, SharedFilePaths.doNotSendPath);
                             continue;
                         }
 
@@ -49,6 +50,7 @@ namespace LicenseStatusChecker
                             // if the license is expired or inactive, we move on
                             var reason = $"{washingtonTradesman.LicenseNumber} is not active.";
                             AddTradesmanToDoNotSendList(doNotSend, washingtonTradesman, reason);
+                            _writer.WriteSingleTradesmanToFile(washingtonTradesman, SharedFilePaths.doNotSendPath);
                             continue;
                         }
 
@@ -86,15 +88,18 @@ namespace LicenseStatusChecker
                         {
                             var reason = $" | {washingtonTradesman.LicenseNumber} has enough credits.";
                             AddTradesmanToDoNotSendList(doNotSend, washingtonTradesman, reason);
+                            _writer.WriteSingleTradesmanToFile(washingtonTradesman, SharedFilePaths.doNotSendPath);
                             continue;
                         }
                         if (numberOfCredits > 0)
                         {
                             var reason = $" | {washingtonTradesman.LicenseNumber} has some credits already.";
                             AddTradesmanToDoNotSendList(doNotSend, washingtonTradesman, reason);
+                            _writer.WriteSingleTradesmanToFile(washingtonTradesman, SharedFilePaths.doNotSendPath);
                             continue;
                         }
                         tradesmenToSend.Add(washingtonTradesman);
+                        _writer.WriteSingleTradesmanToFile(washingtonTradesman, SharedFilePaths.sendPath);
                     }
                     catch (Exception ex)
                     {
@@ -103,9 +108,9 @@ namespace LicenseStatusChecker
                         continue;
                     }
                 }
-                _writer.WriteDataToFile(doNotSend, SharedFilePaths.doNotSendPath);
+                //_writer.WriteDataToFile(doNotSend, SharedFilePaths.doNotSendPath);
             }
-            _writer.WriteDataToFile(tradesmenToSend, SharedFilePaths.sendPath);
+            //_writer.WriteDataToFile(tradesmenToSend, SharedFilePaths.sendPath);
         }
 
         public void AddTradesmanToDoNotSendList(List<ITradesman> list, ITradesman tradesman, string reason)

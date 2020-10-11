@@ -12,7 +12,7 @@ namespace LicenseStatusChecker
             var kernel = new StandardKernel(new DependencyContainer());
 
             kernel.Get<ILogger>().LogStart();
-            kernel.Get<ILicenseChecker>().InputLicenses(kernel.Get<IReader>().ReadSpreadSheet(SharedFilePaths.readPath, "WA"));
+            kernel.Get<ILicenseChecker>().CheckLicenses(kernel.Get<IReader>().ReadSpreadSheet(SharedFilePaths.readPath, "WA"));
             kernel.Get<ILogger>().LogEnd();
         }
     }
