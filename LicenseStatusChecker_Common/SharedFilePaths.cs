@@ -11,6 +11,8 @@
         public static string exceptionLog = $"..\\..\\..\\Files\\exception.txt";
         public static string greaterThan90Log = $"..\\..\\..\\Files\\greaterThan90.txt";
 
+        public static string coursesAlreadyTakenLog = $"..\\..\\..\\Files\\coursesAlreadyTaken.xlsx";
+
         public static string driverLocation = $"..\\..\\..\\packages\\Selenium.Firefox.WebDriver.0.24.0\\driver\\";
     }
 }

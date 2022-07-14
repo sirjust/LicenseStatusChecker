@@ -27,6 +27,7 @@ namespace LicenseStatusChecker
         {
             var tradesmenToSend = new List<ITradesman>();
             var doNotSend = new List<ITradesman>();
+            var coursesAlreadyTaken = new Dictionary<string, int>();
 
             foreach (List<ITradesman> tradeList in tradesmen)
             {
@@ -35,13 +36,21 @@ namespace LicenseStatusChecker
                     try
                     {
                         _driver.Url = $"https://secure.lni.wa.gov/verify/Detail.aspx?UBI=&LIC={washingtonTradesman.LicenseNumber}&SAW=";
+                        var expiration = CheckExpirationDate();
 
-                        if (CheckExpirationDate().Item1 > 90) // if the expiration date is far in the future, the WashingtonTradesman has already renewed
+                        if (expiration.Item1 > 90) // if the expiration date is far in the future, the WashingtonTradesman has already renewed
                         {
-                            washingtonTradesman.ExpirationDate = CheckExpirationDate().Item2.ToString();
+                            washingtonTradesman.ExpirationDate = expiration.Item2.ToString();
                             var reason = $"{washingtonTradesman.LicenseNumber} has likely already renewed.";
                             AddTradesmanToDoNotSendList(doNotSend, washingtonTradesman, reason);
                             _writer.WriteSingleTradesmanToFile(washingtonTradesman, SharedFilePaths.doNotSendPath);
+                            continue;
+                        }
+
+                        if (expiration.Item1 == -1)
+                        {
+                            var reason = $"{washingtonTradesman.LicenseNumber} is not a valid license.";
+                            AddTradesmanToDoNotSendList(doNotSend, washingtonTradesman, reason);
                             continue;
                         }
 
@@ -84,6 +93,39 @@ namespace LicenseStatusChecker
                         }
                         washingtonTradesman.HoursCompleted = numberOfCredits;
                         Console.WriteLine($"{washingtonTradesman.LicenseNumber} has completed {washingtonTradesman.HoursCompleted} credits and needs {washingtonTradesman.HoursNeeded}");
+
+                        if (numberOfCredits > 0)
+                        {
+                            // find course names
+                            var singleCols = _driver.FindElement(By.Id("coursesList")).FindElements(By.ClassName("itemSingleCol"));
+                            foreach(var element in singleCols)
+                            {
+                                try
+                                {
+                                    var label = element.FindElement(By.CssSelector("label")); 
+                                    
+                                    if (label.GetAttribute("innerHTML") == "Course title")
+                                    {
+                                        var course = label.FindElement(By.XPath("following-sibling::span"));
+                                        var courseName = course.GetAttribute("innerHTML");
+
+                                        if (coursesAlreadyTaken.ContainsKey(courseName))
+                                        {
+                                            coursesAlreadyTaken[courseName]++;
+                                        }
+                                        else
+                                        {
+                                            coursesAlreadyTaken.Add(courseName, 1);
+                                        }
+                                    }
+                                }
+                                catch
+                                {
+                                    continue;
+                                }
+                            }
+                        }
+
                         if (washingtonTradesman.HoursNeeded <= numberOfCredits)
                         {
                             var reason = $" | {washingtonTradesman.LicenseNumber} has enough credits.";
@@ -110,7 +152,7 @@ namespace LicenseStatusChecker
                 }
                 //_writer.WriteDataToFile(doNotSend, SharedFilePaths.doNotSendPath);
             }
-            //_writer.WriteDataToFile(tradesmenToSend, SharedFilePaths.sendPath);
+            _writer.WriteAlreadyTakenCourses(coursesAlreadyTaken);
         }
 
         public void AddTradesmanToDoNotSendList(List<ITradesman> list, ITradesman tradesman, string reason)
@@ -150,6 +192,13 @@ namespace LicenseStatusChecker
         public (int, DateTime) CheckExpirationDate()
         {
             //now we check the license's expiration date
+
+            if(_driver.Url == "https://secure.lni.wa.gov/verify/default.aspx#ErrorMsg")
+            {
+                // This occurs if the license doesn't exist
+                return (-1, new DateTime());
+            }
+            
             IWebElement expirationDateElement = _wait.Until(d => d.FindElement(By.Id("ExpirationDate")));
             // this delay is here because there was an exception while parsing on the next line if it ran too quickly
             Task.Delay(500).Wait();

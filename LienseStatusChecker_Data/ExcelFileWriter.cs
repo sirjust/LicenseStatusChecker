@@ -109,5 +109,33 @@ namespace LienseStatusChecker_Data
                 throw;
             }
         }
+
+        public void WriteAlreadyTakenCourses(Dictionary<string, int> courses)
+        {
+            var myFileInfo = new FileInfo(SharedFilePaths.coursesAlreadyTakenLog);
+            using (ExcelPackage package = new ExcelPackage())
+            {
+                var worksheet = package.Workbook.Worksheets.Add("mySheet");
+                int cellCounter = 1;
+                worksheet.Cells["A" + cellCounter].Value = "Course Name";
+                worksheet.Cells["B" + cellCounter].Value = "Frequency";
+
+                foreach (var course in courses)
+                {
+                    var dimension = worksheet.Dimension;
+                    cellCounter = worksheet.Dimension.End.Row + 1;
+                    worksheet.Cells["A" + cellCounter].Value = course.Key;
+                    worksheet.Cells["B" + cellCounter].Value = course.Value;
+                }
+                    try
+                {
+                    package.SaveAs(myFileInfo);
+                }
+                catch (InvalidOperationException exception)
+                {
+                    Console.WriteLine("==================\n\nThe destination file appears to be open in another program. Please close it and run again.\n===============\n{0}", exception.ToString());
+                }
+            }
+        }
     }
 }
