@@ -118,14 +118,18 @@ namespace LienseStatusChecker_Data
                 var worksheet = package.Workbook.Worksheets.Add("mySheet");
                 int cellCounter = 1;
                 worksheet.Cells["A" + cellCounter].Value = "Course Name";
-                worksheet.Cells["B" + cellCounter].Value = "Frequency";
+                worksheet.Cells["B" + cellCounter].Value = "Course Code";
+                worksheet.Cells["C" + cellCounter].Value = "Frequency";
 
                 foreach (var course in courses)
                 {
                     var dimension = worksheet.Dimension;
                     cellCounter = worksheet.Dimension.End.Row + 1;
-                    worksheet.Cells["A" + cellCounter].Value = course.Key;
-                    worksheet.Cells["B" + cellCounter].Value = course.Value;
+                    var nameAndCode = course.Key.Split('`');
+
+                    worksheet.Cells["A" + cellCounter].Value = nameAndCode.FirstOrDefault();
+                    worksheet.Cells["B" + cellCounter].Value = nameAndCode.LastOrDefault();
+                    worksheet.Cells["C" + cellCounter].Value = course.Value;
                 }
                     try
                 {

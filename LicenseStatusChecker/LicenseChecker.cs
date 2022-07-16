@@ -102,25 +102,34 @@ namespace LicenseStatusChecker
                             {
                                 try
                                 {
-                                    var label = element.FindElement(By.CssSelector("label")); 
+                                    var nameLabel = element.FindElement(By.CssSelector("label"));
+
+                                    var sibling = element.FindElement(By.XPath("following-sibling::div")).FindElement(By.XPath("following-sibling::div"));
+                                    var codeLabel = sibling.FindElement(By.CssSelector("label"));
                                     
-                                    if (label.GetAttribute("innerHTML") == "Course title")
+                                    if (nameLabel.GetAttribute("innerHTML") == "Course title" && codeLabel.GetAttribute("innerHTML") == "Course code")
                                     {
-                                        var course = label.FindElement(By.XPath("following-sibling::span"));
+                                        var course = nameLabel.FindElement(By.XPath("following-sibling::span"));
                                         var courseName = course.GetAttribute("innerHTML");
 
-                                        if (coursesAlreadyTaken.ContainsKey(courseName))
+                                        var codeElement = codeLabel.FindElement(By.XPath("following-sibling::span"));
+                                        var code = codeElement.GetAttribute("innerHTML");
+
+                                        var namePlusCode = $"{courseName}`{code}";
+
+                                        if (coursesAlreadyTaken.ContainsKey(namePlusCode))
                                         {
-                                            coursesAlreadyTaken[courseName]++;
+                                            coursesAlreadyTaken[namePlusCode]++;
                                         }
                                         else
                                         {
-                                            coursesAlreadyTaken.Add(courseName, 1);
+                                            coursesAlreadyTaken.Add(namePlusCode, 1);
                                         }
                                     }
                                 }
                                 catch
                                 {
+                                    Console.WriteLine("Couldn't determine course used. If this persists contact support.");
                                     continue;
                                 }
                             }
