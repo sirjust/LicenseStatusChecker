@@ -138,20 +138,13 @@ namespace LienseStatusChecker_Data
                 }
                 try
                 {
-                    tradesman.LicenseType = ((object[,])rawData)[0, 0].ToString();
-                    tradesman.Name = ((object[,])rawData)[0, 2].ToString();
-                    tradesman.Address1 = ((object[,])rawData)[0, 3].ToString();
-                    if (((object[,])rawData)[0, 4] != null)
-                    {
-                        tradesman.Address2 = ((object[,])rawData)[0, 4].ToString();
-                    }
-                    tradesman.City = ((object[,])rawData)[0, 5].ToString();
-                    if (((object[,])rawData)[0, 6] != null)
-                    {
-                        tradesman.State = ((object[,])rawData)[0, 6].ToString();
-                    }
-
-                    tradesman.Zip = ((object[,])rawData)[0, 7].ToString();
+                    tradesman.LicenseType = ((object[,])rawData)[0, 0]?.ToString();
+                    tradesman.Name = ((object[,])rawData)[0, 2]?.ToString();
+                    tradesman.Address1 = ((object[,])rawData)[0, 3]?.ToString();
+                    tradesman.Address2 = ((object[,])rawData)[0, 4]?.ToString();
+                    tradesman.City = ((object[,])rawData)[0, 5]?.ToString();
+                    tradesman.State = ((object[,])rawData)[0, 6]?.ToString();
+                    tradesman.Zip = ((object[,])rawData)[0, 7]?.ToString();
 
                     listOfTradesmen[i - 1].Add(tradesman);
                 }

@@ -103,7 +103,6 @@ namespace LicenseStatusChecker
                                 try
                                 {
                                     var nameLabel = element.FindElement(By.CssSelector("label"));
-
                                     var sibling = element.FindElement(By.XPath("following-sibling::div")).FindElement(By.XPath("following-sibling::div"));
                                     var codeLabel = sibling.FindElement(By.CssSelector("label"));
                                     
@@ -129,7 +128,7 @@ namespace LicenseStatusChecker
                                 }
                                 catch
                                 {
-                                    Console.WriteLine("Couldn't determine course used. If this persists contact support.");
+                                    //Console.WriteLine("Couldn't determine course used. If this persists contact support.");
                                     continue;
                                 }
                             }
